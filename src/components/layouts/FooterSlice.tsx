@@ -1,8 +1,26 @@
 import React from 'react';
-import Footer from '../Footer/Footer';
+import { LinkProps } from '../../types/common';
+import Footer from '../Footer';
 
-function FooterSlice() {
-  return <Footer />;
+export default function FooterSlice() {
+  const firstColumnLinks: Array<LinkProps> = [
+    { label: 'Live Courses', link: '/course' },
+    { label: 'About Us', link: '/about' },
+    { label: 'Contact Us', link: '/contact' },
+  ];
+
+  const secondColumnLinks: Array<LinkProps> = [
+    { label: 'Live Courses', link: '/course' },
+    { label: 'About Us', link: '/about' },
+    { label: 'Contact Us', link: '/contact' },
+  ];
+
+  return (
+    <Footer
+      promotionText="We are fully bootstrapped and we are not driven by money. We happily teach developers, taking a 100% learn-by-doing approach with a zero powerpoint policy."
+      firstColumnLinks={firstColumnLinks}
+      secondColumnLinks={secondColumnLinks}
+      copyRightText="© Root Ltd 2022"
+    />
+  );
 }
-
-export default FooterSlice;

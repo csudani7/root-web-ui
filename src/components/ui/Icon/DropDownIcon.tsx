@@ -1,8 +1,11 @@
 import React from 'react';
 import clsx from 'clsx';
-import { IconProps } from '.';
+import { IconProps } from '../../../types/common';
 
-function DropDownIcon({ color = 'white', className }: IconProps) {
+export default function DropDownIcon({
+  color = 'white',
+  className,
+}: IconProps) {
   return (
     <svg
       className={clsx('ml-1 h-5 w-5 inline-block', className)}
@@ -19,4 +22,3 @@ function DropDownIcon({ color = 'white', className }: IconProps) {
     </svg>
   );
 }
-export default DropDownIcon;

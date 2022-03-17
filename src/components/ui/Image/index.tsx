@@ -3,26 +3,26 @@ import Img from 'react-imgix';
 import clsx from 'clsx';
 
 interface Props {
+  alt?: string;
+  className?: string;
+  lazyload?: boolean;
+  objectCover?: boolean;
   src: string;
   sizes?: string;
-  lazyload?: boolean;
-  className?: string;
-  alt?: string;
-  objectCover?: boolean;
 }
 
-function Image({
-  src,
-  sizes = '100vw',
+export default function Image({
+  alt = '',
+  className,
   lazyload = true,
   objectCover = true,
-  alt,
-  className,
+  src,
+  sizes = '100vw',
 }: Props) {
   let attributeConfig: any = {};
   const htmlAttributes: any = {
     alt: alt || '',
-    src: src ? `${src.substring(0, src.indexOf('?'))}?auto=format,compress&q=1&blur=10&w=auto` : '',
+    src: src || '',
   };
   if (lazyload) {
     attributeConfig = {
@@ -35,11 +35,13 @@ function Image({
     <Img
       src={src || ''}
       sizes={sizes}
-      className={clsx(className, objectCover && 'object-cover', lazyload && 'lazyload')}
+      className={clsx(
+        className,
+        objectCover && 'object-cover',
+        lazyload && 'lazyload'
+      )}
       attributeConfig={attributeConfig}
       htmlAttributes={htmlAttributes}
     />
   );
 }
-
-export default Image;

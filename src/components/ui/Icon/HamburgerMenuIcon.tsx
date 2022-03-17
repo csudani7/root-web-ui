@@ -1,8 +1,11 @@
 import React from 'react';
 import clsx from 'clsx';
-import { IconProps } from '.';
+import { IconProps } from '../../../types/common';
 
-function HamburgerMenuIcon({ color = 'white', className }: IconProps) {
+export default function HamburgerMenuIcon({
+  color = 'white',
+  className,
+}: IconProps) {
   return (
     <svg
       className={clsx('h-6 w-6 inline-block', className)}
@@ -20,4 +23,3 @@ function HamburgerMenuIcon({ color = 'white', className }: IconProps) {
     </svg>
   );
 }
-export default HamburgerMenuIcon;

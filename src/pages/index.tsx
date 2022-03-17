@@ -1,6 +1,6 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
-import WebHeader from '../components/WebHeader';
+import WebHeader from '../components/ui/WebHeader';
 
 const PageLayout = dynamic(() => import('../components/layouts'));
 

@@ -1,19 +1,19 @@
-import ArrowIcon from './ArrowIcon';
-import ExternalLinkIcon from './ExternalLinkIcon';
+import BackArrowIcon from './BackArrowIcon';
+import CloseIcon from './CloseIcon';
 import DropDownIcon from './DropDownIcon';
 import HamburgerMenuIcon from './HamburgerMenuIcon';
-
-export interface IconProps {
-  color?: string;
-  rotateDegree?: number;
-  width?: number;
-  height?: number;
-  className?: string;
-}
+import ShareIcon from './ShareIcon';
+import SliderArrowIcon from './SliderArrowIcon';
+import QuotesIcon from './Quotes';
+import CokkieIcon from './CokkieIcon';
 
 export {
-  ArrowIcon,
-  ExternalLinkIcon,
+  BackArrowIcon,
+  CloseIcon,
   DropDownIcon,
   HamburgerMenuIcon,
+  ShareIcon,
+  SliderArrowIcon,
+  QuotesIcon,
+  CokkieIcon,
 };
