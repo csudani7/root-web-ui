@@ -6,6 +6,7 @@ import ShareIcon from './ShareIcon';
 import SliderArrowIcon from './SliderArrowIcon';
 import QuotesIcon from './Quotes';
 import CokkieIcon from './CokkieIcon';
+import SlackIcon from './SlackIcon';
 
 export {
   BackArrowIcon,
@@ -16,4 +17,5 @@ export {
   SliderArrowIcon,
   QuotesIcon,
   CokkieIcon,
+  SlackIcon,
 };
