@@ -62,12 +62,7 @@ function SideMenu({
   }, [isSideMenuOpened]);
 
   return (
-    <SidePanel
-      scroll
-      isOpened={isSideMenuOpened}
-      setIsOpened={setIsSideMenuOpened}
-      popupSide={'top'}
-    >
+    <SidePanel scroll isOpened={isSideMenuOpened} setIsOpened={setIsSideMenuOpened}>
       <div className="relative">
         <div className="flex justify-between md:hidden items-center px-4 py-6 gap-5">
           <Link href="/login">

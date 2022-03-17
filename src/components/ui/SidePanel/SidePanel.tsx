@@ -31,14 +31,14 @@ function SidePanel({ isOpened, setIsOpened, className, width, children, scroll }
 
   return (
     <div>
-      <div
+      {/* <div
         className={clsx(
           'bg-black bg-opacity-40 h-screen fixed top-0 z-50 left-0 md:w-full',
           isOpened && 'fade-in',
           !isOpened && 'fade-out',
         )}
         onClick={() => setIsOpened(!isOpened)}
-      ></div>
+      ></div> */}
       <div
         className={clsx(
           'flex flex-col bg-white h-screen fixed top-0 w-full z-50 ease-in-out transition-all duration-300',

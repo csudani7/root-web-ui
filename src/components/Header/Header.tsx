@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React, { useCallback, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
-import { ExternalLinkIcon, HamburgerMenuIcon } from '../ui/Icon';
+import { HamburgerMenuIcon } from '../ui/Icon';
 import LinkButton from '../ui/LinkButton/LinkButton';
 import SideMenu from './SideMenu';
 
@@ -28,7 +28,6 @@ interface HeaderProps {
 export function StyledLinkLabel({
   label,
   link,
-  children,
   invertedStyle = false,
   onHamburgerMenuClick,
   target = '_self',
@@ -50,7 +49,6 @@ export function StyledLinkLabel({
         target={target}
       >
         {label}
-        {children}
       </a>
     </Link>
   );
@@ -76,28 +74,19 @@ export function StyledHeader({
   onHamburgerMenuClick,
   isSideMenuOpened,
 }: StyledHeaderProps) {
-  const router = useRouter();
-  const activeMoreLink = ['/about-us/', '/promotions/'].some((tab) => tab === router.asPath);
-
   return (
     <div className={clsx('top-0 w-full fixed z-50 site-container')}>
       <div
         className={clsx(
           'bg-transparent border-b border-white border-opacity-20 transition-colors duration-300 site-container',
-          invertedStyle && 'bg-white',
+          invertedStyle && 'bg-gray-500',
         )}
       >
         <div className="mx-auto px-6 md:px-4 md:pl-8 xl:px-12">
           <div className="flex justify-between items-center lg:justify-start lg:space-x-10">
             <div className="flex justify-start lg:w-0 lg:flex-1 py-4">
               <Link href="/">
-                <a>
-                  {invertedStyle ? (
-                    <img src="/logo-primary.svg" alt="logo" width={172} height={30} />
-                  ) : (
-                    <img src="/logo-primary-invert.svg" alt="logo" width={172} height={30} />
-                  )}
-                </a>
+                <img src="/logo-primary.svg" alt="logo" />
               </Link>
             </div>
             <nav className="hidden xl:flex space-x-10">
@@ -110,14 +99,7 @@ export function StyledHeader({
                     link={link}
                     invertedStyle={invertedStyle}
                     target={isExternalLink ? '_blank' : '_self'}
-                  >
-                    {isExternalLink && (
-                      <ExternalLinkIcon
-                        color="currentColor"
-                        className={invertedStyle ? 'text-primary-500' : 'text-white'}
-                      />
-                    )}
-                  </StyledLinkLabel>
+                  />
                 );
               })}
             </nav>
@@ -134,19 +116,10 @@ export function StyledHeader({
                 size="small"
                 variant="outlined"
                 parentClassName=""
-                href="/login"
+                href="/"
                 color={invertedStyle ? 'primary' : 'white'}
               >
-                Log in
-              </LinkButton>
-              <LinkButton
-                id="homepageSignupHeader"
-                size="small"
-                parentClassName="ml-3"
-                href="/signup"
-                color={invertedStyle ? 'primary' : 'white'}
-              >
-                Sign up
+                View Live Courses
               </LinkButton>
             </div>
             <div

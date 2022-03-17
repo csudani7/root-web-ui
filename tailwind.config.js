@@ -3,10 +3,11 @@ module.exports = {
   purge: {
     content: ['./src/**/*.js', './src/**/*.tsx', './components/**/*.tsx'],
   },
+  darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Montserrat', 'sans-serif'],
+        sans: ['Sora', 'sans-serif'],
         roboto: ['Roboto', 'sans-serif'],
       },
       fontSize: {
@@ -195,6 +196,9 @@ module.exports = {
     animation: {
       fade: 'fade 1.5s ease-in-out ',
     },
+  },
+  corePlugins: {
+    container: false,
   },
   plugins: [],
 };
