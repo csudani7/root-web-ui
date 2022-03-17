@@ -1,7 +1,7 @@
 import React from 'react';
 
 export interface CardWithTextGlowProps {
-  feedBackText: any;
+  feedBackText: string;
   authorImage: string;
   authorName: string;
   authorDesignation: string;
