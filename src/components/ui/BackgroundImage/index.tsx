@@ -26,7 +26,7 @@ export default function BackgroundImage({
       className={clsx(
         parentClass,
         'relative overflow-hidden',
-        setDefaultMinHeight && 'min-h-460 md:min-h-650'
+        setDefaultMinHeight && 'min-h-460 md:min-h-650',
       )}
       style={{ maxHeight: maxHeight || 'inital' }}
     >
