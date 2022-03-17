@@ -10,7 +10,7 @@ function Layout({ children }: Props): ReactElement {
   return (
     <div className="bg-white site-container mx-auto py-64">
       <HeaderSlice />
-      <main>{children}</main>
+      <main className="px-6 md:px-10 lg:px-10">{children}</main>
       <FooterSlice />
     </div>
   );

@@ -20,6 +20,7 @@ module.exports = {
         },
         white: '#ffffff',
         black: '#000000',
+        titleBlack: '#212121',
         error: '#ee251e',
         successful: '#28A745',
         disable: '#D2D8E0',
