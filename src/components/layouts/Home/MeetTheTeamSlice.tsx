@@ -14,6 +14,7 @@ export default function MeetTheTeamSlice() {
         bgColor="bg-transparant"
         buttonBgColor="bg-gradient-to-r from-lightGreen via-mediumSpringGreen to-aquamarine font-semibold"
         borderRadius="rounded-lg"
+        isUserCollection={true}
       />
     </div>
   );

@@ -3,6 +3,7 @@ import dynamic from 'next/dynamic';
 
 const WebHeader = dynamic(() => import('../components/ui/WebHeader'));
 const PageLayout = dynamic(() => import('../components/layouts'));
+const CourseLearnMoreSlice = dynamic(() => import('../components/layouts/Home/CourseLearnMoreSlice'));
 const CoursesCardSlice = dynamic(() => import('../components/layouts/Home/CoursesCardSlice'));
 const MeetOtherSlice = dynamic(() => import('../components/layouts/Home/MeetOtherSlice'));
 const MeetTheTeamSlice = dynamic(() => import('../components/layouts/Home/MeetTheTeamSlice'));
@@ -17,6 +18,7 @@ function HomePage() {
     <>
       <WebHeader />
       <PageLayout>
+        <CourseLearnMoreSlice />
         <CoursesCardSlice />
         <MeetOtherSlice />
         <MeetTheTeamSlice />

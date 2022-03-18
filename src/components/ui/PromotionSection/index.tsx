@@ -23,6 +23,7 @@ export interface PromotionSectionProps {
   type?: 'button' | 'submit';
   buttonIcon?: React.ReactElement;
   borderRadius: string;
+  isUserCollection?: boolean;
 }
 
 export default function PromotionSection({
@@ -38,6 +39,7 @@ export default function PromotionSection({
   buttonBgColor,
   buttonIcon,
   borderRadius,
+  isUserCollection = false,
 }: PromotionSectionProps) {
   const position =
     imagePosition === 'left'
@@ -48,7 +50,7 @@ export default function PromotionSection({
     <div
       className={clsx(
         'w-full h-full flex items-center py-4',
-        imagePosition === 'left' ? 'px-6 md:px-10' : 'px-6 md:px-0',
+        imagePosition === 'left' ? 'px-0 md:px-10' : 'px-0 md:px-0',
         position,
         rootClassName,
         bgColor,
@@ -56,9 +58,29 @@ export default function PromotionSection({
       )}
     >
       <div className={`flex-none md:w-${imageRatio} pt-7 md:pt-0`}>
-        <AnimatedSlideInContainer>
-          <Image src={promotionImage.src} alt={promotionImage.alt} className="m-auto" />
-        </AnimatedSlideInContainer>
+        {isUserCollection ? (
+          <AnimatedSlideInContainer>
+            <div className="h-96 items-center flex flex-col justify-center relative bg-transparant pt-4 lg">
+              <div className="flex items-center">
+                <div className="w-fit rounded-full z-10 px-6">
+                  <Image src="/png/user-profile-0.png" alt="user-profile" />
+                </div>
+                <div className="relative w-fit rounded-full -top-2 lg:top-0 -left-4 lg:left-6 z-10 px-6">
+                  <Image src="/png/user-profile-1.png" alt="user-profile" />
+                </div>
+              </div>
+              <div className="flex justify-center items-center relative -top-12 -left-6 lg:-top-16 lg:left-3">
+                <div className="w-fit rounded-full">
+                  <Image src="/png/user-profile-2.png" alt="user-profile" />
+                </div>
+              </div>
+            </div>
+          </AnimatedSlideInContainer>
+        ) : (
+          <AnimatedSlideInContainer>
+            <Image src={promotionImage.src} alt={promotionImage.alt} className="m-auto" />
+          </AnimatedSlideInContainer>
+        )}
       </div>
       <div
         className={clsx(
@@ -70,7 +92,7 @@ export default function PromotionSection({
           <div className="text-easternBlue uppercase text-base font-semibold tracking-wide font-inter pb-6">
             {subTitle}
           </div>
-          <div className="font-sora text-3xl md:text-4xl text-left font-semibold text-titleBlack leading-8 tracking-wider">
+          <div className="font-sora text-3xl md:text-4xl text-left font-semibold text-titleBlack leading-8 tracking-wider w-full md:w-1/2">
             {title}
           </div>
           <div className="font-inter text-titleBlack text-base font-medium pt-6 pb-12 md:pb-16">
