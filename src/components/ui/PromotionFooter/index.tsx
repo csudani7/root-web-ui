@@ -25,9 +25,8 @@ export interface PromotionFooterProps {
   buttonWidth?: string;
   buttonHeight?: string;
   buttonIcon?: React.ReactElement;
-  width?: string;
-  height?: string;
   titleTextClass: string;
+  borderRadius: string;
 }
 
 export default function PromotionFooter({
@@ -42,19 +41,23 @@ export default function PromotionFooter({
   buttonBgColor,
   outlineColor,
   variant,
-  type,
   buttonWidth,
   buttonHeight,
   buttonIcon,
-  width = '',
-  height = 'h-72',
   titleTextClass,
+  borderRadius,
 }: PromotionFooterProps) {
   const position = imagePosition === 'left' ? 'flex-row' : 'flex-row-reverse';
 
   return (
     <div
-      className={`md:flex ${position} ${rootClassName} ${bgColor} ${width} ${height} justify-center items-center`}
+      className={clsx(
+        'w-full h-full md:flex justify-center items-center px-10 py-4',
+        position,
+        rootClassName,
+        bgColor,
+        borderRadius,
+      )}
     >
       <div className={`flex-none md:w-${imageRatio}`}>
         <AnimatedSlideInContainer>
@@ -65,7 +68,10 @@ export default function PromotionFooter({
         <div className="box-content w-full flex flex-col justify-center items-center ">
           <div className="sm:mt-0 mb-8 break-words">
             <div
-              className={`w-60 text-lg md:text-xl xl:text-2xl text-center font-medium not-italic leading-8 tracking-wider ${titleTextClass} break-words`}
+              className={clsx(
+                'w-60 text-lg md:text-xl xl:text-2xl text-center font-medium not-italic leading-8 tracking-wider break-words',
+                titleTextClass,
+              )}
             >
               {title}
             </div>
@@ -77,14 +83,12 @@ export default function PromotionFooter({
             width={buttonWidth}
             height={buttonHeight}
           >
-            <a href={''} className="relative z-10">
-              <div className="flex justify-center items-center">
-                {buttonIcon && buttonIcon}
-                <div className={clsx(buttonIcon && `ml-2`, 'text-xl font-semibold')}>
-                  {buttonText}
-                </div>
+            <div className="flex justify-center items-center">
+              {buttonIcon && buttonIcon}
+              <div className={clsx(buttonIcon && `ml-2`, 'text-xl font-semibold')}>
+                {buttonText}
               </div>
-            </a>
+            </div>
           </Button>
           {children}
         </div>

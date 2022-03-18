@@ -5,7 +5,7 @@ import CardWithTextGlow from '../../ui/CardWithTextGlow';
 export default function FeedbackSlice() {
   return (
     <>
-      <div className="font-sans font-semibold text-4xl text-center text-titleBlack px-72 pb-10">
+      <div className="font-sans font-semibold text-4xl text-left md:text-center text-titleBlack px-0 md:px-72 pb-10">
         See what 2,000+ talented developers from across the globe said...
       </div>
       <div className="grid lg:grid-cols-4 md:grid-cols-2">
