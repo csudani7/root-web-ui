@@ -29,7 +29,7 @@ export default function Header({ headerMainLinks }: HeaderProps) {
       <div ref={ref} />
       <div className="top-0 w-full fixed z-50 site-container">
         <div className={clsx('site-container', inView ? 'bg-white' : 'bg-white')}>
-          <div className="px-6 md:px-4 md:pl-8 xl:px-12">
+          <div className="px-6 md:px-4 md:pl-8 xl:px-10">
             <div className="flex justify-between items-center lg:justify-start lg:space-x-10">
               <div className="flex justify-start items-center lg:w-0 lg:flex-1 py-1">
                 <a href={routes.home} className="flex flex-col pl-1.5">

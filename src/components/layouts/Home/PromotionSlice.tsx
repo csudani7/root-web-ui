@@ -7,7 +7,7 @@ export default function PromotionSlice() {
       <PromotionSection
         buttonText="FAQ"
         imagePosition="left"
-        promotionImage={{ src: '/svg/promotion-image-three.svg', alt: 'promotion-photo' }}
+        promotionImage={{ src: '/png/promotion-image-three.png', alt: 'promotion-photo' }}
         subTitle="pricing"
         title="Wait...this is all free?!"
         content="Thats right - zero, nil, nothing, nada! We believe in quality education and making education accessible everywhere 🌎  at low costs."
