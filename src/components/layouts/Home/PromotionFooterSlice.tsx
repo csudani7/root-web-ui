@@ -4,7 +4,7 @@ import PromotionFooter from '../../ui/PromotionFooter';
 
 export default function PromotionFooterSlice() {
   return (
-    <div className="grid grid-cols-1 gap-5 md:grid md:grid-cols-1 md:gap-5 lg:grid lg:grid-cols-2 lg:gap-5">
+    <div className="grid grid-cols-1 gap-5 md:grid md:grid-cols-1 md:gap-5 lg:grid lg:grid-cols-2 lg:gap-5 px-6 md:px-10 lg:px-10">
       <div>
         <PromotionFooter
           buttonText="View Courses"

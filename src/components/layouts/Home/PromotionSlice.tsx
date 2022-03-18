@@ -3,7 +3,7 @@ import PromotionSection from '../../ui/PromotionSection';
 
 export default function PromotionSlice() {
   return (
-    <div className="grid grid-cols-1">
+    <div className="grid grid-cols-1 px-6 md:px-10 lg:px-10">
       <PromotionSection
         buttonText="FAQ"
         imagePosition="left"

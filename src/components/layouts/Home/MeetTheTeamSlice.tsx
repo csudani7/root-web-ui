@@ -3,7 +3,7 @@ import PromotionSection from '../../ui/PromotionSection';
 
 export default function MeetTheTeamSlice() {
   return (
-    <div className="grid grid-cols-1 py-32 md:py-40">
+    <div className="grid grid-cols-1 py-32 md:py-40 px-6 md:px-10 lg:px-10">
       <PromotionSection
         buttonText="About Us"
         imagePosition="right"
