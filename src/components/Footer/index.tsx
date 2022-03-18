@@ -18,7 +18,7 @@ const FooterLinks = ({ links }: { links: Array<LinkProps> }) => (
         <div key={index} className="pt-4">
           <a
             href={link}
-            className="text-lg not-italic tracking-wider text-gray-500 hover:text-royalBlue cursor-pointer"
+            className="text-lg not-italic tracking-wider text-gray-500 cursor-pointer"
             target="_self"
           >
             {label}
