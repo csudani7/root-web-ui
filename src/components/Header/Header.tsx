@@ -1,12 +1,10 @@
 import React from 'react';
 import clsx from 'clsx';
-import { useSetRecoilState } from 'recoil';
 import { useInView } from 'react-intersection-observer';
 import Button from '../ui/Button';
 import { HamburgerMenuIcon } from '../ui/Icon';
 import { LinkWithLabel } from '../ui/LabelWithLinks';
 import { LinkProps } from '../../types/common';
-import { isRequestQuoteBannerOnAtom } from '../../recoils/RequestQuoteBannerRecoil';
 import { routes } from '../../routes';
 import SideMenu from './SideMenu';
 
@@ -15,7 +13,6 @@ export interface HeaderProps {
 }
 
 export default function Header({ headerMainLinks }: HeaderProps) {
-  const setIsModalVisible = useSetRecoilState(isRequestQuoteBannerOnAtom);
   const [isSideMenuOpened, setIsSideMenuOpened] = React.useState(false);
 
   const { ref, inView } = useInView({
