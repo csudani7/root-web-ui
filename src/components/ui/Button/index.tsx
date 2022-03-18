@@ -3,31 +3,26 @@ import clsx from 'clsx';
 
 export interface ButtonProps {
   children: any;
-  bgColor: string;
-  outlineColor?: string;
-  variant?: 'fill' | 'outline';
+  className: string;
   type?: 'button' | 'submit';
-  width?: string;
-  height?: string;
+  size?: string;
   onClick?: () => void;
 }
 
 export default function Button({
   children,
-  bgColor,
-  outlineColor,
-  variant,
+  className,
   type,
-  width,
-  height,
+  size = 'medium',
   onClick,
 }: ButtonProps) {
   const styles = [
-    'items-center justify-center tracking-wider py-4 px-12 rounded',
-    variant === 'outline' ? 'bg-transparent' : `${bgColor}`,
-    variant === 'outline' && `border-2 border-solid ${outlineColor}`,
-    width,
-    height,
+    'items-center justify-center tracking-wider rounded font-semibold',
+    size === 'tiny' && 'text-sm p-2.5',
+    size === 'small' && 'text-xs px-4 py-1',
+    size === 'medium' && 'text-sm md:text-xl px-3 py-3 md:px-6 md:py-3',
+    size === 'large' && 'text-base px-8 py-3.5',
+    className,
   ];
 
   return (
@@ -35,27 +30,4 @@ export default function Button({
       {children}
     </button>
   );
-}
-
-{
-  /* <div className="flex flex-col justify-center items-center">
-          <div className="my-2">
-            <Button bgColor={'bg-green-300'}>
-              <div className="flex justify-center items-center">
-                <SlackIcon />
-                <h4 className="ml-2 text-xl">Join</h4>
-              </div>
-            </Button>
-          </div>
-          <div className="my-2">
-            <Button bgColor={'bg-green-300'}>
-              <h4>Learn More</h4>
-            </Button>
-          </div>
-          <div className="my-2">
-            <Button bgColor={'bg-transparent'} variant="outline" outlineColor={'border-green-300'}>
-              <h4>View Course</h4>
-            </Button>
-          </div>
-        </div> */
 }

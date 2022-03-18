@@ -14,8 +14,6 @@ export default function PromotionFooterSlice() {
           bgColor="bg-gradient-to-r from-lightGreen via-mediumSpringGreen to-aquamarine"
           buttonBgColor="bg-gradient-to-r from-lightGreen to-caribbeanGreen"
           titleTextClass="text-black"
-          buttonHeight="h-16"
-          buttonWidth="w-60"
           borderRadius="rounded-lg"
         />
       </div>
@@ -28,8 +26,6 @@ export default function PromotionFooterSlice() {
           bgColor="bg-black"
           buttonBgColor="bg-white"
           buttonIcon={<SlackIcon />}
-          buttonWidth="w-40"
-          buttonHeight="h-16"
           titleTextClass="text-white"
           borderRadius="rounded-lg"
         />

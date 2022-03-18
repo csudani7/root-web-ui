@@ -29,9 +29,9 @@ export default function SideMenu({
       <div className="flex flex-col w-full right-0 items-start transition-all duration-500 ease-in-out">
         <div className="bg-aliceBlue flex flex-row items-center justify-between w-full h-14 px-6 border-b border-gray-850 border-opacity-20">
           <div className="bg-transparent flex">
-            <h1 className="font-sans font-medium uppercase text-2xl">
+            <h1 className="font-inter font-medium uppercase text-2xl">
               <a href={routes.home} onClick={onHamburgerMenuClick}>
-                Bitontree
+                <img src="/logo-primary.svg" alt="logo" />
               </a>
             </h1>
           </div>
@@ -54,11 +54,6 @@ export default function SideMenu({
               </Link>
             </div>
           ))}
-        </div>
-        <div className="flex items-center px-6">
-          <Button className="border border-royalBlue font-bold" size="medium">
-            <span className="relative z-10">Request a Quote</span>
-          </Button>
         </div>
       </div>
     </SideBar>

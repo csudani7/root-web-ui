@@ -22,8 +22,6 @@ export interface PromotionFooterProps {
   outlineColor?: string;
   variant?: 'fill' | 'outline';
   type?: 'button' | 'submit';
-  buttonWidth?: string;
-  buttonHeight?: string;
   buttonIcon?: React.ReactElement;
   titleTextClass: string;
   borderRadius: string;
@@ -41,8 +39,6 @@ export default function PromotionFooter({
   buttonBgColor,
   outlineColor,
   variant,
-  buttonWidth,
-  buttonHeight,
   buttonIcon,
   titleTextClass,
   borderRadius,
@@ -76,18 +72,10 @@ export default function PromotionFooter({
               {title}
             </div>
           </div>
-          <Button
-            bgColor={buttonBgColor}
-            variant={variant}
-            outlineColor={outlineColor}
-            width={buttonWidth}
-            height={buttonHeight}
-          >
+          <Button className={buttonBgColor} size="medium">
             <div className="flex justify-center items-center">
-              {buttonIcon && buttonIcon}
-              <div className={clsx(buttonIcon && `ml-2`, 'text-xl font-semibold')}>
-                {buttonText}
-              </div>
+              {buttonIcon && <span className="mr-2">{buttonIcon}</span>}
+              {buttonText}
             </div>
           </Button>
           {children}

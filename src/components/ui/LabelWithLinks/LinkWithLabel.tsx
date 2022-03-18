@@ -8,7 +8,7 @@ export function LinkWithLabel({ children, label, link }: any) {
     <Link href={link}>
       <a
         className={clsx(
-          'flex items-center py-4 font-sans font-medium text-base leading-normal tracking-wider uppercase',
+          'flex items-center py-4 font-sora font-medium text-base leading-normal tracking-wider uppercase',
           router.asPath === link
             ? 'border-royalBlue border-b-2 text-royalBlue'
             : 'hover:border-royalBlue hover:border-b-2 text-gray-900'

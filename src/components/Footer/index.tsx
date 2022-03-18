@@ -37,7 +37,7 @@ export default function Footer({
   secondColumnLinks,
 }: FooterProps) {
   return (
-    <div className={clsx('font-sans relative bg-white', rootClassName)}>
+    <div className={clsx('font-inter relative bg-white', rootClassName)}>
       <div className="relative block lg:grid grid-cols-6 gap-12 px-9 py-12">
         <div className="flex flex-col justify-center col-span-2 pb-8">
           <div className="flex flex-col items-center jusify-center">

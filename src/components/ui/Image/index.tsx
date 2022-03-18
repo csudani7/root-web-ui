@@ -1,5 +1,4 @@
 import React from 'react';
-import Img from 'react-imgix';
 import clsx from 'clsx';
 
 interface Props {
@@ -8,40 +7,20 @@ interface Props {
   lazyload?: boolean;
   objectCover?: boolean;
   src: string;
-  sizes?: string;
 }
 
-export default function Image({
+export default function ImageComponent({
   alt = '',
   className,
   lazyload = true,
   objectCover = true,
   src,
-  sizes = '100vw',
 }: Props) {
-  let attributeConfig: any = {};
-  const htmlAttributes: any = {
-    alt: alt || '',
-    src: src || '',
-  };
-  if (lazyload) {
-    attributeConfig = {
-      src: 'data-src',
-      srcSet: 'data-srcset',
-      sizes: 'data-sizes',
-    };
-  }
   return (
-    <Img
+    <img
       src={src || ''}
-      sizes={sizes}
-      className={clsx(
-        className,
-        objectCover && 'object-cover',
-        lazyload && 'lazyload'
-      )}
-      attributeConfig={attributeConfig}
-      htmlAttributes={htmlAttributes}
+      alt={alt}
+      className={clsx(className, objectCover && 'object-cover', lazyload && 'lazyload')}
     />
   );
 }

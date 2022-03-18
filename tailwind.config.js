@@ -7,7 +7,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Sora', 'sans-serif'],
+        sora: ['Sora', 'sans-serif'],
+        tnter: ['Inter', 'sans-serif'],
       },
       fontSize: {
         '7xl': '7.5rem',
@@ -21,6 +22,7 @@ module.exports = {
         lightGreen: '#6BFB95',
         caribbeanGreen: '#00D091',
         mediumSpringGreen: '#00EEA7',
+        mintTulip: '#C4F8DE',
         aquamarine: '#87F1D1',
         white: '#ffffff',
         black: '#000000',
@@ -39,6 +41,7 @@ module.exports = {
       },
       spacing: {
         82: '21.563rem',
+        116: '34rem',
       },
     },
     minHeight: {

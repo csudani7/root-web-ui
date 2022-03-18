@@ -58,11 +58,10 @@ export default function Header({ headerMainLinks }: HeaderProps) {
                 }
               >
                 <Button
-                  className={clsx('font-semibold border border-royalBlue')}
+                  className="bg-gradient-to-r from-lightGreen via-mediumSpringGreen to-aquamarine font-semibold"
                   size="tiny"
-                  onClick={() => setIsModalVisible(true)}
                 >
-                  <span className="relative z-10">Request a Quote</span>
+                  View Live Courses
                 </Button>
               </div>
               <div
