@@ -9,8 +9,9 @@ export default function FeedbackSlice() {
         See what 2,000+ talented developers from across the globe said...
       </div>
       <div className="grid lg:grid-cols-4 md:grid-cols-2">
-        {[...Array(8)].map(() => (
+        {[...Array(8)].map((item, index) => (
           <CardWithTextGlow
+            key={index}
             feedBackText={developersReviewData.feedBackText}
             authorImage={developersReviewData.authorImage}
             authorName={developersReviewData.authorName}

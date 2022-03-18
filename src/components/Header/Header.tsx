@@ -28,12 +28,7 @@ export default function Header({ headerMainLinks }: HeaderProps) {
     <>
       <div ref={ref} />
       <div className="top-0 w-full fixed z-50 site-container">
-        <div
-          className={clsx(
-            'border-b border-gray-850 border-opacity-20 site-container',
-            inView ? 'bg-transparent' : 'bg-white',
-          )}
-        >
+        <div className={clsx('site-container', inView ? 'bg-white' : 'bg-white')}>
           <div className="px-6 md:px-4 md:pl-8 xl:px-12">
             <div className="flex justify-between items-center lg:justify-start lg:space-x-10">
               <div className="flex justify-start items-center lg:w-0 lg:flex-1 py-1">
@@ -41,12 +36,6 @@ export default function Header({ headerMainLinks }: HeaderProps) {
                   <img src="/logo-primary.svg" alt="logo" />
                 </a>
               </div>
-              <nav className="hidden xl:flex space-x-8">
-                {headerMainLinks?.map((item, index) => {
-                  const { label, link } = item;
-                  return <LinkWithLabel key={`nav-link-${index}`} label={label} link={link} />;
-                })}
-              </nav>
               <div
                 className={
                   isSideMenuOpened
@@ -54,6 +43,12 @@ export default function Header({ headerMainLinks }: HeaderProps) {
                     : 'hidden md:flex items-center justify-end md:flex-1 lg:w-0'
                 }
               >
+                <nav className="hidden xl:flex space-x-14 pr-16">
+                  {headerMainLinks?.map((item, index) => {
+                    const { label, link } = item;
+                    return <LinkWithLabel key={`nav-link-${index}`} label={label} link={link} />;
+                  })}
+                </nav>
                 <Button
                   className="bg-gradient-to-r from-lightGreen via-mediumSpringGreen to-aquamarine font-semibold"
                   size="tiny"
@@ -74,7 +69,7 @@ export default function Header({ headerMainLinks }: HeaderProps) {
                   onClick={onHamburgerMenuClick}
                   aria-label="Hamburger Menu Open"
                 >
-                  <HamburgerMenuIcon color="#2A61F9" />
+                  <HamburgerMenuIcon color="#000" />
                 </button>
               </div>
             </div>

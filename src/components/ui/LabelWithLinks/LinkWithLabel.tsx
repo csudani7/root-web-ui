@@ -1,20 +1,21 @@
 import clsx from 'clsx';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
+import { SlackIcon } from '../Icon';
 
 export function LinkWithLabel({ children, label, link }: any) {
-  const router = useRouter();
   return (
     <Link href={link}>
       <a
         className={clsx(
-          'flex items-center py-4 font-sora font-medium text-base leading-normal tracking-wider uppercase',
-          router.asPath === link
-            ? 'border-royalBlue border-b-2 text-royalBlue'
-            : 'hover:border-royalBlue hover:border-b-2 text-gray-900'
+          'flex items-center py-4 font-inter font-semibold text-base leading-normal tracking-wider text-tuna',
         )}
         target="_self"
       >
+        {link === '#' && (
+          <span className='mr-2'>
+            <SlackIcon />
+          </span>
+        )}
         {label}
         {children}
       </a>

@@ -26,6 +26,7 @@ module.exports = {
         aquamarine: '#87F1D1',
         white: '#ffffff',
         black: '#000000',
+        tuna: '#454851',
         titleBlack: '#212121',
         error: '#ee251e',
         successful: '#28A745',
