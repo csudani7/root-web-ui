@@ -7,7 +7,7 @@ export default function PromotionFooterSlice() {
   return (
     <div className="relative">
       <div className="hidden md:block md:absolute md:right-0 md:-top-40">
-        <Image src="/png/eastern-blue-shadow.png" alt="eastern-blue-shadow"  />
+        <Image src="/png/eastern-blue-shadow.png" alt="eastern-blue-shadow" />
       </div>
       <div className="flex flex-col md:flex-row w-full space-y-4 md:space-y-0 md:space-x-4 px-6 md:px-10 lg:px-10">
         <PromotionFooter
