@@ -34,7 +34,6 @@ export default function BackgroundImage({
         <Image
           src={src}
           alt={alt}
-          sizes="100%"
           className={`absolute top-0 left-0 w-full h-full ${imgClassName}`}
         />
       )}
