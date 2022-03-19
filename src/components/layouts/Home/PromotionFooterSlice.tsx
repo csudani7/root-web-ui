@@ -4,8 +4,8 @@ import PromotionFooter from '../../ui/PromotionFooter';
 
 export default function PromotionFooterSlice() {
   return (
-    <div className="grid grid-cols-1 gap-5 md:grid md:grid-cols-1 md:gap-5 lg:grid lg:grid-cols-2 lg:gap-5 px-6 md:px-10 lg:px-10">
-      <div>
+    <div className="relative">
+      <div className="flex flex-col md:flex-row w-full space-y-4 md:space-y-0 md:space-x-4 px-6 md:px-10 lg:px-10">
         <PromotionFooter
           buttonText="View Courses"
           imagePosition="left"
@@ -16,8 +16,6 @@ export default function PromotionFooterSlice() {
           titleTextClass="text-black"
           borderRadius="rounded-lg"
         />
-      </div>
-      <div>
         <PromotionFooter
           buttonText="Join"
           imagePosition="left"
@@ -28,6 +26,7 @@ export default function PromotionFooterSlice() {
           buttonIcon={<SlackIcon />}
           titleTextClass="text-white"
           borderRadius="rounded-lg"
+          rootClassName='md:shadow-easternBlueShadow'
         />
       </div>
     </div>

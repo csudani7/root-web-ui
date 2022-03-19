@@ -42,7 +42,7 @@ export default function PromotionFooter({
   return (
     <div
       className={clsx(
-        'w-full h-full md:flex justify-center items-center px-10 py-4',
+        'w-full h-auto md:flex justify-center items-center px-10 py-4',
         position,
         rootClassName,
         bgColor,

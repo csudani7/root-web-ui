@@ -36,6 +36,12 @@ module.exports = {
         82: '21.563rem',
         116: '34rem',
       },
+      boxShadow: {
+        easternBlueShadow: '756px 0px 160px 4px rgba(6,141,157, 0.5)',
+      },
+      backgroundImage: {
+        'heroPattern': "url('/png/hero-gradient.png')",
+      },
     },
     minHeight: {
       460: '460px',
