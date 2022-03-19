@@ -1,14 +1,18 @@
 import React from 'react';
 import { courseCardData } from '../../../utils';
 import CardWithImage from '../../ui/CardWithImage';
+import ImageComponent from '../../ui/Image';
 
 export default function CoursesCardSlice() {
   return (
-    <div className="px-6 md:px-10 lg:px-10 py-16 md:py-36">
+    <div className="relative px-6 md:px-10 lg:px-10 py-16 md:py-36">
+      <div className="hidden md:block md:absolute -left-16">
+        <ImageComponent src="/png/yellow-shadow.png" alt="light-green-shadow" />
+      </div>
       <div className="font-sora font-semibold text-3xl md:text-4xl text-left text-titleBlack pb-8 md:pb-12">
         Upcoming Live Courses
       </div>
-      <div className="grid grid-cols-1 md:grid md:grid-cols-4 lg:grid lg:grid-cols-4">
+      <div className="md:relative grid grid-cols-1 md:grid md:grid-cols-4 lg:grid lg:grid-cols-4">
         {courseCardData.map((item, index) => (
           <CardWithImage
             key={index}

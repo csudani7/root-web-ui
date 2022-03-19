@@ -92,7 +92,7 @@ export default function MeetOtherSlice() {
       <div className="w-full mx-auto">
         <iframe
           src="https://www.youtube.com/embed/tgbNymZ7vqY"
-          className="h-64 h-96 w-10/12 md:w-9/12 mx-auto"
+          className="h-64 md:h-96 w-10/12 md:w-9/12 mx-auto"
         />
       </div>
     </div>

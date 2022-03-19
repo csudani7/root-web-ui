@@ -51,7 +51,7 @@ export default function PromotionSection({
   return (
     <div
       className={clsx(
-        'w-full h-full flex items-center py-4',
+        'relative w-full h-full flex items-center py-4',
         imagePosition === 'left' ? 'px-0 md:px-10' : 'px-0 md:px-0',
         position,
         rootClassName,
@@ -86,7 +86,7 @@ export default function PromotionSection({
       </div>
       <div
         className={clsx(
-          'flex-auto flex flex-col items-center md:items-start px-0',
+          'flex-auto flex flex-col items-center md:items-start px-6',
           imagePosition === 'left' ? 'md:px-12' : 'ml:px-12',
         )}
       >

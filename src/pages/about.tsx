@@ -16,7 +16,7 @@ export default function AboutPage() {
       <PageLayout>
         <FeedbackSlice isTitleShow={false} />
         <PromotionSlice />
-        <FeedbackSlice />
+        <FeedbackSlice isTitleShow={false} />
         <PromotionFooterSlice />
       </PageLayout>
     </>

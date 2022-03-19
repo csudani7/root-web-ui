@@ -37,10 +37,11 @@ module.exports = {
         116: '34rem',
       },
       boxShadow: {
-        easternBlueShadow: '756px 0px 160px 4px rgba(6,141,157, 0.5)',
+        // easternBlueShadow: '756px 0px 160px 4px rgba(6,141,157, 0.5)',
       },
       backgroundImage: {
         'heroPattern': "url('/png/hero-gradient.png')",
+        'easternBlueShadow': "url('/png/eastern-blue-shadow.png')",
       },
     },
     minHeight: {

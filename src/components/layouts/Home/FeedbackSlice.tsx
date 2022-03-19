@@ -1,6 +1,7 @@
 import React from 'react';
 import { developersReviewData } from '../../../utils';
 import CardWithTextGlow from '../../ui/CardWithTextGlow';
+import ImageComponent from '../../ui/Image';
 
 export interface FeedbackSliceProps {
   isTitleShow?: boolean;
@@ -8,7 +9,10 @@ export interface FeedbackSliceProps {
 
 export default function FeedbackSlice({ isTitleShow = true }: FeedbackSliceProps) {
   return (
-    <div className="px-6 md:px-10 lg:px-10 pt-24 pb-14 md:pt-40 md:pb-44 lg:pt-40 lg:pb-44">
+    <div className="relative px-6 md:px-10 lg:px-10 pt-24 pb-14 md:pt-40 md:pb-44 lg:pt-40 lg:pb-44">
+      <div className="hidden md:block md:absolute md:left-0">
+        <ImageComponent src="/png/light-green-shadow.png" alt="light-green-shadow" />
+      </div>
       {isTitleShow && (
         <div className="font-sora font-semibold text-4xl text-left md:text-center text-titleBlack px-0 pb-10 md:px-72 lg:px-116">
           See what 2,000+ talented developers from across the globe said...
