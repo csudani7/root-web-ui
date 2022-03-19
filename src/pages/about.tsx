@@ -3,8 +3,9 @@ import dynamic from 'next/dynamic';
 
 const WebHeader = dynamic(() => import('../components/ui/WebHeader'));
 const PageLayout = dynamic(() => import('../components/layouts'));
-const PromotionSlice = dynamic(() => import('../components/layouts/Home/PromotionSlice'));
+const TutorPlaceSlice = dynamic(() => import('../components/layouts/About/TutorPlaceSlice'));
 const StatsCounterSlice = dynamic(() => import('../components/layouts/About/StatsCounterSlice'));
+const PromotionSlice = dynamic(() => import('../components/layouts/Home/PromotionSlice'));
 const FeedbackSlice = dynamic(() => import('../components/layouts/Home/FeedbackSlice'));
 const PromotionFooterSlice = dynamic(
   () => import('../components/layouts/Home/PromotionFooterSlice'),
@@ -15,10 +16,11 @@ export default function AboutPage() {
     <>
       <WebHeader />
       <PageLayout>
-        <FeedbackSlice isTitleShow={false} />
+        <FeedbackSlice isTitleShow={false} isShadowShow={false} />
+        <TutorPlaceSlice />
         <StatsCounterSlice />
         <PromotionSlice />
-        <FeedbackSlice isTitleShow={false} />
+        <FeedbackSlice isTitleShow={false} isShadowShow={false} />
         <PromotionFooterSlice />
       </PageLayout>
     </>

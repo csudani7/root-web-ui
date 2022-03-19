@@ -8,12 +8,12 @@ export default function StatsCounterSlice() {
         <div className="text-easternBlue font-medium font-inter tracking-wide uppercase text-base">
           some quick facts
         </div>
-        <div className="text-titleBlack font-semibold font-sora text-3xl md:text-4xl">
+        <div className="text-titleBlack font-semibold font-sora text-3xl md:text-4xl pt-4">
           Numbers and stats
         </div>
       </div>
       <div>
-        <div className="text-titleBlack font-medium font-sora text-3xl md:text-6xl">
+        <div className="text-titleBlack font-semibold font-sora text-3xl md:text-6xl">
           <CounterAnimation end={129} duration={5} />
         </div>
         <div className="text-titleBlack font-medium font-inter tracking-wide text-base">
@@ -21,7 +21,7 @@ export default function StatsCounterSlice() {
         </div>
       </div>
       <div>
-        <div className="text-titleBlack font-medium font-sora text-3xl md:text-6xl">
+        <div className="text-titleBlack font-semibold font-sora text-3xl md:text-6xl">
           <CounterAnimation end={2000} duration={5} />
         </div>
         <div className="text-titleBlack font-medium font-inter tracking-wide text-base">
@@ -29,7 +29,7 @@ export default function StatsCounterSlice() {
         </div>
       </div>
       <div>
-        <div className="text-titleBlack font-medium font-sora text-3xl md:text-6xl">
+        <div className="text-titleBlack font-semibold font-sora text-3xl md:text-6xl">
           <CounterAnimation end={129} duration={5} />
         </div>
         <div className="text-titleBlack font-medium font-inter tracking-wide text-base">
@@ -37,7 +37,7 @@ export default function StatsCounterSlice() {
         </div>
       </div>
       <div>
-        <div className="text-titleBlack font-medium font-sora text-3xl md:text-6xl">
+        <div className="text-titleBlack font-semibold font-sora text-3xl md:text-6xl">
           <CounterAnimation end={1034} duration={5} />
         </div>
         <div className="text-titleBlack font-medium font-inter tracking-wide text-base">
