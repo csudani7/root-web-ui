@@ -10,9 +10,9 @@ export default function FooterSlice() {
   ];
 
   const secondColumnLinks: Array<LinkProps> = [
-    { label: 'Live Courses', link: '/course' },
-    { label: 'About Us', link: '/about' },
-    { label: 'Contact Us', link: '/contact' },
+    { label: 'Instagram', link: '/course' },
+    { label: 'LinkedIn', link: '/about' },
+    { label: 'Twitter', link: '/contact' },
   ];
 
   return (
