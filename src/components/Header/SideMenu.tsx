@@ -26,7 +26,7 @@ export default function SideMenu({
           <div className="bg-transparent flex">
             <h1 className="font-inter font-medium uppercase text-2xl">
               <a href={routes.home} onClick={onHamburgerMenuClick}>
-                <img src="/logo-primary.svg" alt="logo" />
+                <img src="/logo-primary.svg" alt="logo" className="w-16 h-16 md:w-full md:h-full"/>
               </a>
             </h1>
           </div>

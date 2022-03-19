@@ -32,8 +32,8 @@ export default function Header({ headerMainLinks }: HeaderProps) {
           <div className="md:px-10 md:py-6">
             <div className="flex justify-between items-center lg:justify-start lg:space-x-10">
               <div className="flex justify-start items-center lg:w-0 lg:flex-1 py-1">
-                <a href={routes.home} className="flex flex-col pl-1.5">
-                  <img src="/logo-primary.svg" alt="logo" />
+                <a href={routes.home} className="flex flex-col pl-6">
+                  <img src="/logo-primary.svg" alt="logo" className="w-16 h-16 md:w-full md:h-full"/>
                 </a>
               </div>
               <div

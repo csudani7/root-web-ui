@@ -14,7 +14,7 @@ const CardWithTextGlow = ({
   authorDesignation,
 }: CardWithTextGlowProps) => {
   return (
-    <div className="m-5 items-center text-justify">
+    <div className="mx-0 my-5 md:my-5 md:mx-5 items-center text-justify">
       <p className="italic text-titleBlack font-inter">
         {feedBackText}
         <mark className="bg-mintTulip font-semibold">
