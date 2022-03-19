@@ -26,7 +26,9 @@ export default function CardWithImage({
         {cardSubTitle}
       </div>
       <div>
-        <div className="pb-4 font-sora font-normal text-2xl md:text-3xl text-titleBlack">{cardTitle}</div>
+        <div className="pb-4 font-sora font-normal text-2xl md:text-3xl text-titleBlack">
+          {cardTitle}
+        </div>
         <p className="text-base pb-6 text-titleBlack">{cardDescription}</p>
         <Button className="bg-transparant border border-lightGreen" size="medium">
           <div className="flex justify-center items-center">View Course</div>

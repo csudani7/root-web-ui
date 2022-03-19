@@ -1,11 +1,7 @@
 import React from 'react';
 import { IconProps } from '../../../types/common';
 
-export default function QuotesIcon({
-  width = 40,
-  height = 40,
-  className,
-}: IconProps) {
+export default function QuotesIcon({ width = 40, height = 40, className }: IconProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

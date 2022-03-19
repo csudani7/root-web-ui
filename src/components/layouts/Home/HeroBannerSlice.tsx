@@ -15,7 +15,11 @@ export default function HeroBannerSlice() {
         <Image src="/png/hero-banner-2.png" alt="hero-banner-1" />
       </div>
       <div className="absolute -bottom-10 md:bottom-32 right-1/3 z-10">
-        <Image src="/png/hero-banner-3.png" alt="hero-banner-1" className='w-32 h-32 md:w-full md:h-full' />
+        <Image
+          src="/png/hero-banner-3.png"
+          alt="hero-banner-1"
+          className="w-32 h-32 md:w-full md:h-full"
+        />
       </div>
       <div className="absolute bottom-56 left-2/3 z-10">
         <Image src="/png/hero-banner-1.png" alt="hero-banner-1" />

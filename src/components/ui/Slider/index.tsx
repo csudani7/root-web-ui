@@ -11,7 +11,7 @@ export function Slider({ data, settings, sliderType }: SliderProps) {
   return (
     <SlickSlider {...settings}>
       {data?.map((slide: any, index: number) =>
-        React.createElement(sliderType, { ...slide, key: index })
+        React.createElement(sliderType, { ...slide, key: index }),
       )}
     </SlickSlider>
   );

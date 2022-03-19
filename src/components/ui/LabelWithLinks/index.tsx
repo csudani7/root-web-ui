@@ -12,7 +12,7 @@ export function LinkWithLabel({ children, label, link }: any) {
         target="_self"
       >
         {link === '#' && (
-          <span className='mr-2'>
+          <span className="mr-2">
             <SlackIcon />
           </span>
         )}

@@ -1,12 +1,7 @@
 import React from 'react';
 import { IconProps } from '../../../types/common';
 
-export default function BackArrowIcon({
-  width,
-  height,
-  className,
-  color,
-}: IconProps) {
+export default function BackArrowIcon({ width, height, className, color }: IconProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

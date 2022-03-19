@@ -1,12 +1,7 @@
 import React from 'react';
 import { IconProps } from '../../../types/common';
 
-export default function CloseIcon({
-  width,
-  height,
-  className,
-  color,
-}: IconProps) {
+export default function CloseIcon({ width, height, className, color }: IconProps) {
   return (
     <svg
       width={width || '50'}

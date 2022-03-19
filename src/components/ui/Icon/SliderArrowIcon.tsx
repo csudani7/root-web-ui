@@ -1,12 +1,7 @@
 import React from 'react';
 import { IconProps } from '../../../types/common';
 
-export default function SliderArrowIcon({
-  width,
-  height,
-  color,
-  className,
-}: IconProps) {
+export default function SliderArrowIcon({ width, height, color, className }: IconProps) {
   return (
     <svg
       width={width || '80'}
@@ -17,13 +12,7 @@ export default function SliderArrowIcon({
       className={className}
     >
       <g filter="url(#filter0_d)">
-        <ellipse
-          cx="69.5516"
-          cy="62.5315"
-          rx="45.5516"
-          ry="46.5315"
-          fill={color || '#2C3A47'}
-        />
+        <ellipse cx="69.5516" cy="62.5315" rx="45.5516" ry="46.5315" fill={color || '#2C3A47'} />
       </g>
       <g clipPath="url(#clip0)">
         <path
@@ -49,21 +38,9 @@ export default function SliderArrowIcon({
           />
           <feOffset dy="8" />
           <feGaussianBlur stdDeviation="12" />
-          <feColorMatrix
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"
-          />
-          <feBlend
-            mode="normal"
-            in2="BackgroundImageFix"
-            result="effect1_dropShadow"
-          />
-          <feBlend
-            mode="normal"
-            in="SourceGraphic"
-            in2="effect1_dropShadow"
-            result="shape"
-          />
+          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0" />
+          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+          <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
         </filter>
         <clipPath id="clip0">
           <rect

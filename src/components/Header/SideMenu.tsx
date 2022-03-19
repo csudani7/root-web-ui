@@ -1,7 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 import CloseIcon from '../ui/Icon/CloseIcon';
 import Button from '../ui/Button';
 import { LinkProps } from '../../types/common';
@@ -20,7 +19,6 @@ export default function SideMenu({
   isSideMenuOpened,
   onHamburgerMenuClick,
 }: SideMenuProps) {
-  const router = useRouter();
   return (
     <SideBar scroll isOpened={isSideMenuOpened} className="bg-white">
       <div className="flex flex-col w-full right-0 items-start transition-all duration-500 ease-in-out">
