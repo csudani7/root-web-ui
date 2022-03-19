@@ -8,7 +8,7 @@ interface Props {
 
 function Layout({ children }: Props): ReactElement {
   return (
-    <div className="bg-white site-container mx-auto pt-24">
+    <div className="bg-white site-container mx-auto">
       <HeaderSlice />
       <main>{children}</main>
       <FooterSlice />

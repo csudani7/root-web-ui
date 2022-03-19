@@ -14,6 +14,7 @@ export default function AboutPage() {
     <>
       <WebHeader />
       <PageLayout>
+        <FeedbackSlice isTitleShow={false} />
         <PromotionSlice />
         <FeedbackSlice />
         <PromotionFooterSlice />

@@ -24,6 +24,7 @@ export interface PromotionSectionProps {
   buttonIcon?: React.ReactElement;
   borderRadius: string;
   isUserCollection?: boolean;
+  listOfFeature?: Array<{ text: string }>;
 }
 
 export default function PromotionSection({
@@ -40,6 +41,7 @@ export default function PromotionSection({
   buttonIcon,
   borderRadius,
   isUserCollection = false,
+  listOfFeature,
 }: PromotionSectionProps) {
   const position =
     imagePosition === 'left'
@@ -95,8 +97,16 @@ export default function PromotionSection({
           <div className="font-sora text-3xl md:text-4xl text-left font-semibold text-titleBlack leading-8 tracking-wider w-full md:w-1/2">
             {title}
           </div>
-          <div className="font-inter text-titleBlack text-base font-medium pt-6 pb-12 md:pb-16">
-            {content}
+          <div className="font-inter text-titleBlack text-base font-medium pt-6">{content}</div>
+          <div className="pt-6 pb-12">
+            {listOfFeature &&
+              listOfFeature.map((item, index) => {
+                return (
+                  <div key={index} className="pb-2">
+                    {item.text}
+                  </div>
+                );
+              })}
           </div>
         </div>
         <Button className={buttonBgColor} size="medium">

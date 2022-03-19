@@ -14,6 +14,12 @@ export default function CourseLearnMoreSlice() {
         bgColor="bg-transparant"
         buttonBgColor="bg-gradient-to-r from-lightGreen via-mediumSpringGreen to-aquamarine font-semibold"
         borderRadius="rounded-lg"
+        listOfFeature={[
+          { text: '📈 Getting to an intermediate level of TypeScript' },
+          { text: '💻 Practicing with examples and activities' },
+          { text: '📅 Attending live sessions on Zoom' },
+          { text: '👥 Connecting with like-minded learners' },
+        ]}
       />
     </div>
   );
