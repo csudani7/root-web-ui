@@ -18,7 +18,7 @@ export default function SideBarTabs({
   buttonText,
 }: SideBarTabsProps) {
   return (
-    <div className="row-span-1 md:col-span-1 px-6 md:px-32">
+    <div className="px-6 md:px-32">
       <div className="border bottom-2 border-lightGreen px-8">
         <div className="text-easternBlue uppercase text-base font-semibold tracking-wide font-inter px-6 pt-6 pb-3">
           {tabTitle}

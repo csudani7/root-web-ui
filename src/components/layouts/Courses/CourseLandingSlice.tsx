@@ -9,7 +9,11 @@ export default function CourseLandingSlice() {
         <ImageComponent src="/png/light-green-shadow.png" alt="light-green-shadow" />
       </div>
       <div className="hidden md:block md:absolute md:top-12 md:right-80">
-        <ImageComponent src="/png/full-eastern-blue-shadow.png" alt="full-eastern-blue-shadow" className='w-3/4 h-3/4' />
+        <ImageComponent
+          src="/png/full-eastern-blue-shadow.png"
+          alt="full-eastern-blue-shadow"
+          className="w-3/4 h-3/4"
+        />
       </div>
       <LandingBanner
         isButtonShow={true}
@@ -20,8 +24,8 @@ export default function CourseLandingSlice() {
         buttonBgColor="bg-gradient-to-r from-lightGreen via-mediumSpringGreen to-aquamarine font-semibold"
         buttonText="Enroll now"
         imagePosition={'right'}
-        subTitle='full weekend'
-        noteText='Only 2 spots left in next cohort March 5th'
+        subTitle="full weekend"
+        noteText="Only 2 spots left in next cohort March 5th"
       />
     </div>
   );

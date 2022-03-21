@@ -1,4 +1,3 @@
-import clsx from 'clsx';
 import React from 'react';
 import {
   courseTimelineData,
@@ -9,7 +8,6 @@ import {
 import Button from '../../ui/Button';
 import CardWithTextGlow from '../../ui/CardWithTextGlow';
 import LandingBanner from '../../ui/LandingBanner';
-import OutlinedCard from '../../ui/OutlinedCard';
 import PromotionSection from '../../ui/PromotionSection';
 import SideBarTabs from '../../ui/SideBarTabs';
 
@@ -27,7 +25,7 @@ export default function SidebarTabsSlice() {
   ];
 
   return (
-    <div className="grid grid-rows-2 md:grid-cols-3 mb-24">
+    <div className="grid md:grid-cols-3 mb-24">
       <SideBarTabs
         tabTitle="typescript course"
         arrayOfTab={arrayOfTab}
@@ -35,7 +33,7 @@ export default function SidebarTabsSlice() {
         setActiveTab={setActiveTab}
         buttonText="Enroll now"
       />
-      <div className="row-span-1 md:col-span-2 px-6 md:px-0">
+      <div className="md:col-span-2 px-6 md:px-0">
         {activeTab === 'overview' && (
           <div>
             <PromotionSection
@@ -60,11 +58,11 @@ export default function SidebarTabsSlice() {
         )}
         {activeTab === 'curriculum' && (
           <div className="md:px-10 lg:px-10">
-            <div className="pb-8">
-              <div className="text-easternBlue uppercase text-base font-semibold tracking-wide font-inter">
+            <div className="py-8">
+              <div className="text-easternBlue uppercase text-base font-semibold tracking-wide font-inter pb-0 md:pb-4">
                 curriculum
               </div>
-              <div className="font-sora text-3xl md:text-4xl text-left font-semibold text-titleBlack leading-8 tracking-wider w-full md:w-1/2 py-6">
+              <div className="font-sora text-3xl md:text-4xl text-left font-semibold text-titleBlack leading-8 tracking-wider pb-0 md:pb-4">
                 What You’ll Learn
               </div>
               <div className="font-inter text-titleBlack text-base font-medium">
@@ -72,31 +70,26 @@ export default function SidebarTabsSlice() {
               </div>
             </div>
             {curriculumData.map((data, index) => (
-              <div className="my-6">
-                <OutlinedCard key={index}>
-                  <>
-                    <div className="text-xl font-semibold text-black leading-7.5">{data.topic}</div>
-                    {data.subTopics.length > 0 && (
-                      <ul className="list-disc pt-4 px-6 md:px-6 lg:px-6">
-                        {data.subTopics.map((items, index) => (
-                          <li
-                            className="text-base font-medium text-titleBlack leading-6"
-                            key={index}
-                          >
-                            {items}
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                  </>
-                </OutlinedCard>
+              <div key={index} className="my-6">
+                <div className="border-solid border-3 border-easternBlue rounded-lg md:p-6 lg:p-6 p-6 items-center">
+                  <div className="text-xl font-semibold text-black leading-7.5">{data.topic}</div>
+                  {data.subTopics.length > 0 && (
+                    <ul className="list-disc pt-4 px-6 md:px-6 lg:px-6">
+                      {data.subTopics.map((items, index) => (
+                        <li className="text-base font-medium text-titleBlack leading-6" key={index}>
+                          {items}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
               </div>
             ))}
           </div>
         )}
         {activeTab === 'schedule' && (
-          <div className="lg:px-10 md:px-10">
-            <div className="pb-8">
+          <div>
+            <div className="pb-8 px-10">
               <div className="text-easternBlue uppercase text-base font-semibold tracking-wide font-inter">
                 schedule
               </div>
@@ -107,14 +100,13 @@ export default function SidebarTabsSlice() {
                 The course is done with a mix of live lectures, activities and Q&As.
               </div>
             </div>
-            <div className="grid grid-cols-2 justify-between">
+            <div className="grid grid-cols-2 divide-x-2 divide-easternBlue">
               {courseTimelineData.map((data, index) => (
-                <div
-                  key={index}
-                  className="border-r-3 border-solid border-easternBlue lg:mr-12 md:mr-12 mx-2 pr-8"
-                >
-                  <div className="font-medium text-2xl leading-9 pb-4">{data.heading}</div>
-                  <div className="md:pr-4 lg:pr-10">
+                <div key={index} className="px-2 md:px-10">
+                  <div className="font-inter font-medium text-2xl leading-9 pb-4">
+                    {data.heading}
+                  </div>
+                  <div>
                     {data.details.map((item, index) => (
                       <div key={index} className="font-medium text-base leading-10">
                         {item}
@@ -190,9 +182,9 @@ export default function SidebarTabsSlice() {
             <div className="font-inter text-titleBlack text-base font-medium">
               We cap our cohorts at 10 students.
             </div>
-            <div className='grid grid-cols-1 md:grid md:grid-cols-3 lg:grid lg:grid-cols-3 mt-10'>
+            <div className="grid grid-cols-1 md:grid md:grid-cols-3 lg:grid lg:grid-cols-3 mt-10">
               {nextCohortsData.map((data, index) => (
-                <div className='mb-12'>
+                <div className="mb-12">
                   <div className="text-easternBlue uppercase text-base font-semibold tracking-wide font-inter">
                     {data.title}
                   </div>
