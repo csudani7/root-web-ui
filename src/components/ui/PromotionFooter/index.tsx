@@ -5,6 +5,7 @@ import { ImageType } from '../../../types/common';
 import Image from '../Image';
 import Button from '../Button';
 import clsx from 'clsx';
+import ImageComponent from '../Image';
 
 export type ImageRatio = '1/2' | '1/3' | '2/3';
 export type ImagePosition = 'left' | 'right';
@@ -42,19 +43,22 @@ export default function PromotionFooter({
   return (
     <div
       className={clsx(
-        'w-full h-auto md:flex justify-center items-center px-10 py-4',
+        'w-full h-auto md:flex justify-center items-center px-10 py-4 z-10',
         position,
         rootClassName,
         bgColor,
         borderRadius,
       )}
     >
+      <div className="hidden md:block md:absolute md:right-0 md:-top-32">
+        <ImageComponent src="/png/eastern-blue-shadow.png" alt="eastern-blue-shadow" />
+      </div>
       <div className={`flex-none md:w-${imageRatio}`}>
         <AnimatedSlideInContainer>
           <Image src={promotionImage.src} alt={promotionImage.alt} className="m-auto" />
         </AnimatedSlideInContainer>
       </div>
-      <div className="flex-auto flex flex-col justify-center  items-center md:px-12">
+      <div className="relative flex-auto flex flex-col justify-center  items-center md:px-12">
         <div className="box-content w-full flex flex-col justify-center items-center ">
           <div className="sm:mt-0 mb-8 break-words">
             <div

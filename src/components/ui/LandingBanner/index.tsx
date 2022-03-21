@@ -77,7 +77,11 @@ export default function LandingBanner({
             <Button className={buttonBgColor} size="medium">
               <div className="flex justify-center items-center">{buttonText}</div>
             </Button>
-            <div className="text-easternBlue text-base font-semibold tracking-wide font-inter mt-4 md:mt-0 md:ml-4 md:w-1/2">{noteText}</div>
+            {noteText && (
+              <div className="text-easternBlue text-base font-semibold tracking-wide font-inter mt-4 md:mt-0 md:ml-4 md:w-1/2">
+                {noteText}
+              </div>
+            )}
           </div>
         )}
       </div>

@@ -7,7 +7,7 @@ import Button from '../Button';
 import clsx from 'clsx';
 
 export type ImageRatio = '1/2' | '1/3' | '2/3';
-export type ImagePosition = 'left' | 'right';
+export type ImagePosition = 'left' | 'right' | 'down';
 
 export interface PromotionSectionProps {
   buttonText: string;
@@ -25,6 +25,7 @@ export interface PromotionSectionProps {
   borderRadius: string;
   isUserCollection?: boolean;
   listOfFeature?: Array<{ text: string }>;
+  isButtonShow?: boolean;
 }
 
 export default function PromotionSection({
@@ -42,17 +43,26 @@ export default function PromotionSection({
   borderRadius,
   isUserCollection = false,
   listOfFeature,
+  isButtonShow = false,
 }: PromotionSectionProps) {
-  const position =
-    imagePosition === 'left'
-      ? 'flex-col flex-col-reverse md:flex-row'
-      : 'flex-col flex-col-reverse md:flex-row-reverse';
+  const position = React.useMemo(() => {
+    switch (imagePosition) {
+      case 'left':
+        return 'flex-col flex-col-reverse md:flex-row';
+      case 'down':
+        return 'flex-col flex-col-reverse';
+      case 'right':
+        return 'flex-col flex-col-reverse md:flex-row-reverse';
+      default:
+        return 'flex-col flex-col-reverse';
+    }
+  }, [imagePosition]);
 
   return (
     <div
       className={clsx(
         'relative w-full h-full flex items-center py-4',
-        imagePosition === 'left' ? 'px-0 md:px-10' : 'px-0 md:px-0',
+        imagePosition === 'left' ? 'px-0 md:px-10' : 'px-0 md:px-10',
         position,
         rootClassName,
         bgColor,
@@ -109,12 +119,14 @@ export default function PromotionSection({
               })}
           </div>
         </div>
-        <Button className={buttonBgColor} size="medium">
-          <div className="flex justify-center items-center">
-            {buttonIcon && <span className="mr-2">{buttonIcon}</span>}
-            {buttonText}
-          </div>
-        </Button>
+        {isButtonShow && (
+          <Button className={buttonBgColor} size="medium">
+            <div className="flex justify-center items-center">
+              {buttonIcon && <span className="mr-2">{buttonIcon}</span>}
+              {buttonText}
+            </div>
+          </Button>
+        )}
       </div>
     </div>
   );

@@ -6,6 +6,7 @@ const PageLayout = dynamic(() => import('../components/layouts'));
 const CourseLandingSlice = dynamic(
   () => import('../components/layouts/Courses/CourseLandingSlice'),
 );
+const SidebarTabsSlice = dynamic(() => import('../components/layouts/Courses/SidebarTabsSlice'));
 const PromotionFooterSlice = dynamic(
   () => import('../components/layouts/Home/PromotionFooterSlice'),
 );
@@ -16,6 +17,7 @@ export default function CoursePage() {
       <WebHeader />
       <PageLayout>
         <CourseLandingSlice />
+        <SidebarTabsSlice />
         <PromotionFooterSlice />
       </PageLayout>
     </>

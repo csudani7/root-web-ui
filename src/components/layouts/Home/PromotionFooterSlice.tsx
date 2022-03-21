@@ -30,7 +30,6 @@ export default function PromotionFooterSlice() {
           buttonIcon={<SlackIcon />}
           titleTextClass="text-white"
           borderRadius="rounded-lg"
-          rootClassName="z-10 md:shadow-easternBlueShadow"
         />
       </div>
     </div>
