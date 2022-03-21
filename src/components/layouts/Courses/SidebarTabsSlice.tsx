@@ -5,6 +5,7 @@ import {
   curriculumData,
   developersReviewData,
   nextCohortsData,
+  accordianData,
 } from '../../../utils';
 import Accordian from '../../ui/Accordian';
 import Button from '../../ui/Button';
@@ -186,7 +187,7 @@ export default function SidebarTabsSlice() {
             </div>
             <div className="grid grid-cols-1 md:grid md:grid-cols-3 lg:grid lg:grid-cols-3 mt-10">
               {nextCohortsData.map((data, index) => (
-                <div className="mb-12" key="index">
+                <div className="mb-12" key={index}>
                   <div className="text-easternBlue uppercase text-base font-semibold tracking-wide font-inter">
                     {data.title}
                   </div>
@@ -224,14 +225,8 @@ export default function SidebarTabsSlice() {
               </div>
             </div>
             <div className="lg:px-10 md:px-10 md:pt-0 lg:pt-0 ">
-              {[...Array(3)].map((index) => (
-                <Accordian
-                  key={index}
-                  question={'Question'}
-                  answer={
-                    'Answer answer answer Answer answer answer Answer answer answer Answer answer answer Answer answer answerAnswer answer answerAnswer answer answerAnswer answer answerAnswer answer answer'
-                  }
-                />
+              {accordianData.map((item, index) => (
+                <Accordian key={index} question={item.question} answer={item.answer} />
               ))}
             </div>
           </>
