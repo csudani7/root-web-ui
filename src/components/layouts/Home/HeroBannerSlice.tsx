@@ -1,9 +1,14 @@
 import React from 'react';
+import { useRouter } from 'next/router';
+
 import Button from '../../ui/Button';
+import { routes } from '../../../routes';
 import ImageComponent from '../../ui/Image';
 import AnimatedSlideInContainer from '../../ui/AnimatedSlideInContainer';
 
 export default function HeroBannerSlice() {
+  const router = useRouter();
+
   return (
     <div className="flex flex-col md:flex-row pt-24 md:pt-24 md:py-24 bg-heroPattern bg-no-repeat">
       <div className="hidden md:block md:absolute md:top-1/3 md:right-1/3">
@@ -23,8 +28,9 @@ export default function HeroBannerSlice() {
             </div>
             <div className="pt-10 md:pt-14">
               <Button
-                className="bg-gradient-to-r from-lightGreen via-mediumSpringGreen to-aquamarine font-semibold"
                 size="medium"
+                className="bg-gradient-to-r from-lightGreen via-mediumSpringGreen to-aquamarine font-semibold"
+                onClick={() => router.push(routes.course)}
               >
                 View Live Courses
               </Button>

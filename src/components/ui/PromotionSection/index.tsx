@@ -86,8 +86,8 @@ export default function PromotionSection({
       </div>
       <div
         className={clsx(
-          'flex-auto flex flex-col items-center md:items-start px-6',
-          imagePosition === 'left' ? 'md:px-12' : 'ml:px-12',
+          'flex-auto flex flex-col items-center md:items-start',
+          imagePosition === 'left' ? 'px-0 md:px-12' : 'px-0 ml:px-12',
         )}
       >
         <div className="w-full flex flex-col justify-start items-start">

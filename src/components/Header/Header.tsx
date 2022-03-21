@@ -1,6 +1,8 @@
 import React from 'react';
 import clsx from 'clsx';
 import { useInView } from 'react-intersection-observer';
+import { useRouter } from 'next/router';
+
 import Button from '../ui/Button';
 import { HamburgerMenuIcon } from '../ui/Icon';
 import { LinkWithLabel } from '../ui/LabelWithLinks';
@@ -13,6 +15,7 @@ export interface HeaderProps {
 }
 
 export default function Header({ headerMainLinks }: HeaderProps) {
+  const router = useRouter();
   const [isSideMenuOpened, setIsSideMenuOpened] = React.useState(false);
 
   const { ref, inView } = useInView({
@@ -32,7 +35,7 @@ export default function Header({ headerMainLinks }: HeaderProps) {
           <div className="md:px-10 md:py-6">
             <div className="flex justify-between items-center lg:justify-start lg:space-x-10">
               <div className="flex justify-start items-center lg:w-0 lg:flex-1 py-1">
-                <a href={routes.home} className="flex flex-col pl-6">
+                <a href={routes.home} className="flex flex-col pl-6 md:pl-0">
                   <img
                     src="/logo-primary.svg"
                     alt="logo"
@@ -56,6 +59,7 @@ export default function Header({ headerMainLinks }: HeaderProps) {
                 <Button
                   className="bg-gradient-to-r from-lightGreen via-mediumSpringGreen to-aquamarine font-semibold"
                   size="tiny"
+                  onClick={() => router.push(routes.course)}
                 >
                   View Live Courses
                 </Button>

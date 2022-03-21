@@ -54,7 +54,7 @@ export default function PromotionFooter({
           <Image src={promotionImage.src} alt={promotionImage.alt} className="m-auto" />
         </AnimatedSlideInContainer>
       </div>
-      <div className="flex-auto flex flex-col justify-center  items-center px-12">
+      <div className="flex-auto flex flex-col justify-center  items-center md:px-12">
         <div className="box-content w-full flex flex-col justify-center items-center ">
           <div className="sm:mt-0 mb-8 break-words">
             <div
