@@ -213,14 +213,16 @@ export default function SidebarTabsSlice() {
                 These are the topics in TypeScript we’ll cover in 2 days of live lectures.{' '}
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-8">
+              <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6">
                 <Button
                   className={
                     'bg-gradient-to-r from-lightGreen via-mediumSpringGreen to-aquamarine font-semibold'
                   }
                   size="medium"
                 >
-                  <div className="flex justify-center items-center">Contact</div>
+                  <div className="flex justify-center font-semibold text-xl items-center">
+                    Contact
+                  </div>
                 </Button>
               </div>
             </div>
