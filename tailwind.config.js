@@ -34,6 +34,9 @@ module.exports = {
       backgroundImage: {
         heroPattern: "url('/png/hero-gradient.png')",
       },
+      lineHeight: {
+        7.5: '30px',
+      },
     },
     minHeight: {
       460: '460px',

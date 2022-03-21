@@ -1,9 +1,15 @@
 import clsx from 'clsx';
 import React from 'react';
-import { developersReviewData } from '../../../utils';
+import {
+  courseTimelineData,
+  curriculumData,
+  developersReviewData,
+  nextCohortsData,
+} from '../../../utils';
 import Button from '../../ui/Button';
 import CardWithTextGlow from '../../ui/CardWithTextGlow';
 import LandingBanner from '../../ui/LandingBanner';
+import OutlinedCard from '../../ui/OutlinedCard';
 import PromotionSection from '../../ui/PromotionSection';
 import SideBarTabs from '../../ui/SideBarTabs';
 
@@ -52,8 +58,74 @@ export default function SidebarTabsSlice() {
             />
           </div>
         )}
-        {activeTab === 'curriculum' && <div>curriculum</div>}
-        {activeTab === 'schedule' && <div>schedule</div>}
+        {activeTab === 'curriculum' && (
+          <div className="md:px-10 lg:px-10">
+            <div className="pb-8">
+              <div className="text-easternBlue uppercase text-base font-semibold tracking-wide font-inter">
+                curriculum
+              </div>
+              <div className="font-sora text-3xl md:text-4xl text-left font-semibold text-titleBlack leading-8 tracking-wider w-full md:w-1/2 py-6">
+                What You’ll Learn
+              </div>
+              <div className="font-inter text-titleBlack text-base font-medium">
+                These are the topics in TypeScript we’ll cover in 2 days of live lectures.
+              </div>
+            </div>
+            {curriculumData.map((data, index) => (
+              <div className="my-6">
+                <OutlinedCard key={index}>
+                  <>
+                    <div className="text-xl font-semibold text-black leading-7.5">{data.topic}</div>
+                    {data.subTopics.length > 0 && (
+                      <ul className="list-disc pt-4 px-6 md:px-6 lg:px-6">
+                        {data.subTopics.map((items, index) => (
+                          <li
+                            className="text-base font-medium text-titleBlack leading-6"
+                            key={index}
+                          >
+                            {items}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </>
+                </OutlinedCard>
+              </div>
+            ))}
+          </div>
+        )}
+        {activeTab === 'schedule' && (
+          <div className="lg:px-10 md:px-10">
+            <div className="pb-8">
+              <div className="text-easternBlue uppercase text-base font-semibold tracking-wide font-inter">
+                schedule
+              </div>
+              <div className="font-sora text-2xl md:text-4xl lg:text-4xl text-left font-semibold text-titleBlack leading-8 tracking-wider w-full md:w-1/2 py-6">
+                Course timeline
+              </div>
+              <div className="font-inter text-titleBlack text-base font-medium">
+                The course is done with a mix of live lectures, activities and Q&As.
+              </div>
+            </div>
+            <div className="grid grid-cols-2 justify-between">
+              {courseTimelineData.map((data, index) => (
+                <div
+                  key={index}
+                  className="border-r-3 border-solid border-easternBlue lg:mr-12 md:mr-12 mx-2 pr-8"
+                >
+                  <div className="font-medium text-2xl leading-9 pb-4">{data.heading}</div>
+                  <div className="md:pr-4 lg:pr-10">
+                    {data.details.map((item, index) => (
+                      <div key={index} className="font-medium text-base leading-10">
+                        {item}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
         {activeTab === 'teacher' && (
           <div>
             <div className="px-6 md:px-10 lg:px-10">
@@ -93,8 +165,46 @@ export default function SidebarTabsSlice() {
             </div>
           </div>
         )}
-        {activeTab === 'pricing' && <div>pricing</div>}
-        {activeTab === 'next-cohort' && <div>next-cohort</div>}
+        {activeTab === 'pricing' && (
+          <div className="lg:px-10 md:px-10 md:pt-0 lg:pt-0 pt-12">
+            <div className="text-easternBlue uppercase text-base font-semibold tracking-wide font-inter">
+              pricing
+            </div>
+            <div className="font-sora text-2xl md:text-4xl lg:text-4xl text-left font-semibold text-titleBlack leading-8 tracking-wider w-full md:w-1/2 py-6">
+              Heading pricing
+            </div>
+            <div className="font-inter text-titleBlack text-base font-medium">
+              The course is done with a mix of live lectures, activities and Q&As.
+            </div>
+            <div className="font-medium text-2xl leading-9 pt-6">$1000</div>
+          </div>
+        )}
+        {activeTab === 'next-cohort' && (
+          <div className="lg:px-10 md:px-10 md:pt-0 lg:pt-0 pt-12">
+            <div className="text-easternBlue uppercase text-base font-semibold tracking-wide font-inter">
+              next cohort
+            </div>
+            <div className="font-sora text-2xl md:text-4xl lg:text-4xl font-semibold text-titleBlack leading-8 tracking-wider w-full py-6">
+              Here are the upcoming cohorts
+            </div>
+            <div className="font-inter text-titleBlack text-base font-medium">
+              We cap our cohorts at 10 students.
+            </div>
+            <div className='grid grid-cols-1 md:grid md:grid-cols-3 lg:grid lg:grid-cols-3 mt-10'>
+              {nextCohortsData.map((data, index) => (
+                <div className='mb-12'>
+                  <div className="text-easternBlue uppercase text-base font-semibold tracking-wide font-inter">
+                    {data.title}
+                  </div>
+                  <div className="font-normal text-3xl leading-8 mb-8 mt-4">{data.date}</div>
+                  <Button className="bg-transparant border border-lightGreen" size="medium">
+                    <div className="flex justify-center items-center">Enroll Now </div>
+                  </Button>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
         {activeTab === 'faq' && <div>faq</div>}
       </div>
     </div>
