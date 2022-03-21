@@ -1,10 +1,13 @@
 import React from 'react';
+
 import {
   courseTimelineData,
   curriculumData,
   developersReviewData,
   nextCohortsData,
+  accordianData,
 } from '../../../utils';
+import Accordian from '../../ui/Accordian';
 import Button from '../../ui/Button';
 import CardWithTextGlow from '../../ui/CardWithTextGlow';
 import LandingBanner from '../../ui/LandingBanner';
@@ -70,7 +73,7 @@ export default function SidebarTabsSlice() {
               </div>
             </div>
             {curriculumData.map((data, index) => (
-              <div key={index} className="my-6">
+              <div className="my-6" key={index}>
                 <div className="border-solid border-3 border-easternBlue rounded-lg md:p-6 lg:p-6 p-6 items-center">
                   <div className="text-xl font-semibold text-black leading-7.5">{data.topic}</div>
                   {data.subTopics.length > 0 && (
@@ -179,12 +182,12 @@ export default function SidebarTabsSlice() {
             <div className="font-sora text-2xl md:text-4xl lg:text-4xl font-semibold text-titleBlack leading-8 tracking-wider w-full py-6">
               Here are the upcoming cohorts
             </div>
-            <div className="font-inter text-titleBlack text-base font-medium">
+            <div className="font-inter text-titleBlack text-base font-medium leading-6">
               We cap our cohorts at 10 students.
             </div>
             <div className="grid grid-cols-1 md:grid md:grid-cols-3 lg:grid lg:grid-cols-3 mt-10">
               {nextCohortsData.map((data, index) => (
-                <div className="mb-12">
+                <div className="mb-12" key={index}>
                   <div className="text-easternBlue uppercase text-base font-semibold tracking-wide font-inter">
                     {data.title}
                   </div>
@@ -197,7 +200,37 @@ export default function SidebarTabsSlice() {
             </div>
           </div>
         )}
-        {activeTab === 'faq' && <div>faq</div>}
+        {activeTab === 'faq' && (
+          <>
+            <div className="lg:px-10 md:px-10 md:pt-0 lg:pt-0 pt-12 mb-12">
+              <div className="text-easternBlue uppercase text-base font-semibold tracking-wide font-inter">
+                question
+              </div>
+              <div className="font-sora text-2xl md:text-4xl lg:text-4xl font-semibold text-titleBlack leading-8 tracking-wider w-full py-6">
+                Have questions about this course?
+              </div>
+              <div className="font-inter text-titleBlack text-base font-medium leading-6 mb-6">
+                These are the topics in TypeScript we’ll cover in 2 days of live lectures.{' '}
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-8">
+                <Button
+                  className={
+                    'bg-gradient-to-r from-lightGreen via-mediumSpringGreen to-aquamarine font-semibold'
+                  }
+                  size="medium"
+                >
+                  <div className="flex justify-center items-center">Contact</div>
+                </Button>
+              </div>
+            </div>
+            <div className="lg:px-10 md:px-10 md:pt-0 lg:pt-0 ">
+              {accordianData.map((item, index) => (
+                <Accordian key={index} question={item.question} answer={item.answer} />
+              ))}
+            </div>
+          </>
+        )}
       </div>
     </div>
   );
