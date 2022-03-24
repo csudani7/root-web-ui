@@ -5,7 +5,7 @@ function HeaderSlice() {
   return (
     <Header
       headerMainLinks={[
-        { label: 'About', link: '/about' },
+        { label: 'About', link: '/about/manish' },
         { label: 'Join Free slack', link: '#' },
       ]}
     />
