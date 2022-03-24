@@ -125,3 +125,37 @@ export const accordianData = [
       'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,',
   },
 ];
+
+export const promotionData = [
+  {
+    number: '01',
+    title: 'Learn from the best',
+    content:
+      'Interact live with real professionals and learn beyond pre-recorded courses and just videos',
+  },
+  {
+    number: '02',
+    title: 'Community led learning',
+    content: 'You not only learn with your peers but also build life-long relationships',
+  },
+  {
+    number: '03',
+    title: 'Hands on experience',
+    content: 'You not only learn with your peers but also build life-long relationships',
+  },
+];
+
+export const heroBanneImagesData = [
+  { src: '/png/hero-banner-image-1.png', alt: 'hero-banner-photo' },
+  { src: '/png/hero-banner-image-2.png', alt: 'hero-banner-photo' },
+  { src: '/png/hero-banner-image-3.png', alt: 'hero-banner-photo' },
+  { src: '/png/hero-banner-image-4.png', alt: 'hero-banner-photo' },
+  { src: '/png/hero-banner-image-5.png', alt: 'hero-banner-photo' },
+  { src: '/png/hero-banner-image-6.png', alt: 'hero-banner-photo' },
+  { src: '/png/hero-banner-image-7.png', alt: 'hero-banner-photo' },
+  { src: '/png/hero-banner-image-8.png', alt: 'hero-banner-photo' },
+  { src: '/png/hero-banner-image-9.png', alt: 'hero-banner-photo' },
+  { src: '/png/hero-banner-image-10.png', alt: 'hero-banner-photo' },
+  { src: '/png/hero-banner-image-11.png', alt: 'hero-banner-photo' },
+  { src: '/png/hero-banner-image-12.png', alt: 'hero-banner-photo' },
+];

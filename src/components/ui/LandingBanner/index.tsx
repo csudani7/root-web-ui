@@ -20,6 +20,9 @@ interface LandingBannerProps {
   bgColor?: string;
   subTitle?: string;
   noteText?: string;
+  subTitlePosition?: string;
+  titleTextClass?: string;
+  isCourseV2?: boolean;
 }
 
 export default function LandingBanner({
@@ -36,6 +39,9 @@ export default function LandingBanner({
   rootClassName = '',
   bgColor = '',
   noteText = '',
+  subTitlePosition,
+  titleTextClass,
+  isCourseV2,
 }: LandingBannerProps) {
   const position =
     imagePosition === 'left'
@@ -64,18 +70,39 @@ export default function LandingBanner({
         )}
       >
         <div className="w-full flex flex-col justify-start items-start pb-6 md:pb-12">
-          <div className="text-easternBlue uppercase text-base font-semibold tracking-wide font-inter pb-6">
+          <div
+            className={clsx(
+              'text-easternBlue uppercase text-base font-semibold tracking-wide font-inter pb-6',
+              subTitlePosition === 'down' ? 'order-2 pt-6' : 'order-1',
+            )}
+          >
             {subTitle}
           </div>
-          <div className="font-sora font-bold text-titleBlack text-5xl md:text-6xl">{title}</div>
-          <div className="md:w-2/3 font-sora font-medium text-titleBlack text-xl md:text-2xl pt-4">
+          <div
+            className={clsx(
+              subTitlePosition === 'down' ? 'order-1' : 'order-2',
+              titleTextClass,
+              'font-sora font-bold capitalize text-5xl md:text-6xl',
+            )}
+          >
+            {title}
+          </div>
+          <div
+            className={clsx(
+              isCourseV2
+                ? 'text-white md:w-2/3 font-sora font-medium text-base pt-4 order-3'
+                : 'md:w-2/3 font-sora font-medium text-titleBlack text-base pt-4 order-3',
+            )}
+          >
             {content}
           </div>
         </div>
         {isButtonShow && (
           <div className="flex flex-col md:flex md:flex-row md:items-center">
             <Button className={buttonBgColor} size="medium">
-              <div className="flex justify-center items-center">{buttonText}</div>
+              <div className="flex justify-center items-center mx-20 lg:mx-0 md:mx-0">
+                {buttonText}
+              </div>
             </Button>
             {noteText && (
               <div className="text-easternBlue text-base font-semibold tracking-wide font-inter mt-4 md:mt-0 md:ml-4 md:w-1/2">

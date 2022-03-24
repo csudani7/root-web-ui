@@ -4,13 +4,13 @@ import Footer from '../Footer';
 
 export default function FooterSlice() {
   const firstColumnLinks: Array<LinkProps> = [
-    { label: 'Live Courses', link: '/course' },
+    { label: 'Live Courses', link: '/courses/typescript' },
     { label: 'About Us', link: '/about' },
     { label: 'Contact Us', link: '/contact' },
   ];
 
   const secondColumnLinks: Array<LinkProps> = [
-    { label: 'Instagram', link: '/course' },
+    { label: 'Instagram', link: '/courses/typescript' },
     { label: 'LinkedIn', link: '/about' },
     { label: 'Twitter', link: '/contact' },
   ];

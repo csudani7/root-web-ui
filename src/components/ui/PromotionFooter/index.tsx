@@ -23,6 +23,8 @@ export interface PromotionFooterProps {
   buttonIcon?: React.ReactElement;
   titleTextClass: string;
   borderRadius: string;
+  isCourseV2?: boolean;
+  isSecondVariant?: boolean;
 }
 
 export default function PromotionFooter({
@@ -37,6 +39,8 @@ export default function PromotionFooter({
   buttonIcon,
   titleTextClass,
   borderRadius,
+  isCourseV2,
+  isSecondVariant,
 }: PromotionFooterProps) {
   const position = imagePosition === 'left' ? 'flex-row' : 'flex-row-reverse';
 
@@ -50,9 +54,15 @@ export default function PromotionFooter({
         borderRadius,
       )}
     >
-      <div className="hidden md:block md:absolute md:right-0 md:-top-32">
-        <ImageComponent src="/png/eastern-blue-shadow.png" alt="eastern-blue-shadow" />
-      </div>
+      {!isCourseV2 && (
+        <div
+          className={clsx(
+            !isSecondVariant ? 'hidden' : 'hidden md:block md:absolute md:right-0 md:-top-32',
+          )}
+        >
+          <ImageComponent src="/png/eastern-blue-shadow.png" alt="eastern-blue-shadow" />
+        </div>
+      )}
       <div className={`flex-none md:w-${imageRatio}`}>
         <AnimatedSlideInContainer>
           <Image src={promotionImage.src} alt={promotionImage.alt} className="m-auto" />
@@ -71,9 +81,9 @@ export default function PromotionFooter({
             </div>
           </div>
           <Button className={buttonBgColor} size="medium">
-            <div className="flex justify-center items-center">
+            <div className="flex justify-center items-center mx-14 lg:mx-0 md:mx-0">
               {buttonIcon && <span className="mr-2">{buttonIcon}</span>}
-              {buttonText}
+              <div>{buttonText}</div>
             </div>
           </Button>
         </div>

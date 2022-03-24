@@ -7,7 +7,7 @@ export default function WebHeader() {
   const path = router.asPath;
 
   const webTitle = useMemo(() => {
-    if (path === '/') {
+    if (path === '/' || path === '/v2') {
       return 'root | Home';
     } else if (path.includes('about')) {
       return 'root | About';

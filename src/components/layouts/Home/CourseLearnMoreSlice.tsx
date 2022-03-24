@@ -1,10 +1,11 @@
 import React from 'react';
+import { VariantProps } from '../../../types/common';
 import ImageComponent from '../../ui/Image';
 import PromotionSection from '../../ui/PromotionSection';
 
-export default function CourseLearnMoreSlice() {
+export default function CourseLearnMoreSlice({ isSecondVariant }: VariantProps) {
   return (
-    <div className="relative grid grid-cols-1 py-12 md:py-40 px-6 md:px-10 lg:px-10">
+    <div className="relative grid grid-cols-1 py-12 md:py-40 md:px-10 lg:px-10">
       <div className="hidden md:block md:absolute md:top-1/3 md:right-1/3">
         <ImageComponent src="/png/full-dark-green-shadow.png" alt="light-green-shadow" />
       </div>
@@ -24,6 +25,10 @@ export default function CourseLearnMoreSlice() {
           { text: '📅 Attending live sessions on Zoom' },
           { text: '👥 Connecting with like-minded learners' },
         ]}
+        isSecondVariant={isSecondVariant}
+        titleTextClass="text-titleBlack"
+        subTitleTextClass="text-easternBlue"
+        isButtonShow={true}
       />
     </div>
   );

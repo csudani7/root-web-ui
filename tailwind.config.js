@@ -8,34 +8,56 @@ module.exports = {
     extend: {
       fontFamily: {
         sora: ['Sora', 'sans-serif'],
-        tnter: ['Inter', 'sans-serif'],
+        inter: ['Inter', 'sans-serif'],
       },
       fontSize: {
         '7xl': '7.5rem',
       },
       colors: {
         lightGreen: '#6BFB95',
-        light03Green: '#6BFB954d',
+        secondaryLightGreen: '#73FF9B',
+        primaryLightGreen: '#6BFB954d',
         caribbeanGreen: '#00D091',
         caribbean03Green: '#00D0914d',
         mediumSpringGreen: '#00EEA7',
+        mediumSpring02Green: '#08F3AD',
+        jungleGreen: '#27A37E',
+        emerald: '#4CE46E',
         easternBlue: '#068D9D',
+        cornflowerBlue: '#588EF7',
+        turquoiseBlue: '#43DDFF',
+        dodgerBlue: '#108CFF',
+        babyBlue: '#6FF6FF',
+        summerSky: '#36C5F0',
+        aqua: '#00F0FF',
         mintTulip: '#C4F8DE',
         aquamarine: '#87F1D1',
         white: '#ffffff',
         black: '#000000',
         tuna: '#454851',
         titleBlack: '#212121',
+        primaryBlack: '#121212',
       },
       spacing: {
         82: '21.563rem',
+        100: '30rem',
         116: '34rem',
-      },
-      backgroundImage: {
-        heroPattern: "url('/png/hero-gradient.png')",
       },
       lineHeight: {
         7.5: '30px',
+      },
+      margin: {
+        128: '-512px',
+        47: '183px',
+      },
+      keyframes: {
+        heroBanneAnimation: {
+          '0%': { margin: '50px' },
+          '100%': { margin: '0px' },
+        },
+      },
+      animation: {
+        heroBanneAnimation: 'heroBanneAnimation 2s',
       },
     },
     minHeight: {

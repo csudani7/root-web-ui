@@ -17,7 +17,7 @@ export default function Button({
   onClick,
 }: ButtonProps) {
   const styles = [
-    'items-center justify-center tracking-wider rounded font-semibold',
+    'items-center justify-center tracking-wider rounded font-semibold font-sora',
     size === 'tiny' && 'text-sm p-2.5',
     size === 'small' && 'text-xs px-4 py-1',
     size === 'medium' && 'text-sm md:text-xl px-3 py-3 md:px-6 md:py-3',

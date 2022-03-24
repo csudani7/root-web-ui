@@ -1,5 +1,6 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
+import { useRouter } from 'next/router';
 
 const WebHeader = dynamic(() => import('../components/ui/WebHeader'));
 const PageLayout = dynamic(() => import('../components/layouts'));
@@ -17,18 +18,19 @@ const PromotionFooterSlice = dynamic(
 );
 
 function HomePage() {
+  const isSecondVariant = useRouter().pathname.includes('/v2');
   return (
     <>
       <WebHeader />
       <PageLayout>
-        <HeroBannerSlice />
-        <CourseLearnMoreSlice />
-        <CoursesCardSlice />
-        <MeetOtherSlice />
-        <MeetTheTeamSlice />
-        <PromotionSlice />
-        <FeedbackSlice />
-        <PromotionFooterSlice />
+        <HeroBannerSlice isSecondVariant={isSecondVariant} />
+        <CourseLearnMoreSlice isSecondVariant={isSecondVariant} />
+        <CoursesCardSlice isSecondVariant={isSecondVariant} />
+        <MeetOtherSlice isSecondVariant={isSecondVariant} />
+        <MeetTheTeamSlice isSecondVariant={isSecondVariant} />
+        <PromotionSlice isSecondVariant={isSecondVariant} />
+        <FeedbackSlice isSecondVariant={isSecondVariant} />
+        <PromotionFooterSlice isSecondVariant={isSecondVariant} />
       </PageLayout>
     </>
   );

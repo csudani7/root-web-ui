@@ -1,5 +1,5 @@
 export const routes = {
   home: '/',
   about: '/about',
-  course: '/course',
+  course: '/courses/typescript',
 };

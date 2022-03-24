@@ -13,7 +13,7 @@ export default function SideBar({ className, children, isOpened, scroll }: SideB
     <div>
       <div
         className={clsx(
-          'flex flex-col bg-white h-screen md:w-94 fixed top-0 w-full z-50 ease-in-out transition-all duration-300',
+          'flex flex-col bg-white h-screen fixed md:w-94 top-0 w-full z-50 ease-in-out transition-all duration-300',
           isOpened && 'right-0',
           !isOpened && '-right-full',
           className,

@@ -18,3 +18,7 @@ export interface IconProps {
   isActive?: boolean;
   stroke?: string;
 }
+
+export interface VariantProps {
+  isSecondVariant: boolean;
+}
