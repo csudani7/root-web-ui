@@ -39,14 +39,14 @@ export default function AboutPage() {
     <>
       <WebHeader />
       <PageLayout>
-        <AboutLandingSlice currentUser={id} isSecondVariant={isSecondVariant} />
+        <AboutLandingSlice currentUser={id} />
         <SidebarTabsSlice
           selectedCourse={id}
           isSecondVariant={isSecondVariant}
           arrayOfTab={arrayOfTab}
         />
         <TutorPlaceSlice isSecondVariant={isSecondVariant} />
-        <StatsCounterSlice isSecondVariant={isSecondVariant} />
+        <StatsCounterSlice />
         <PromotionSlice isSecondVariant={isSecondVariant} />
         <FeedbackSlice
           isTitleShow={true}

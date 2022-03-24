@@ -1,8 +1,7 @@
 import React from 'react';
-import { VariantProps } from '../../../../types/common';
 import { promotionData } from '../../../../utils';
 
-export default function PromotionSectionSlice({ isSecondVariant }: VariantProps) {
+export default function PromotionSectionSlice() {
   return (
     <div className="grid grid-cols-1 px-6 md:px-10 lg:px-10 bg-gradient-to-b from-white to-primaryLightGreen pt-20 pb-44">
       <div className="font-sora font-extrabold text-4xl lg:text-6xl text-center mb-8">

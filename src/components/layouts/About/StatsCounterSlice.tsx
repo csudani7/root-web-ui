@@ -1,8 +1,7 @@
 import React from 'react';
-import { VariantProps } from '../../../types/common';
 import { CounterAnimation } from '../../ui/CounterAnimation';
 
-export default function StatsCounterSlice({ isSecondVariant }: VariantProps) {
+export default function StatsCounterSlice() {
   return (
     <div className="flex flex-col space-y-4 md:flex md:flex-row md:space-y-0 px-6 md:px-10 lg:px-10 pb-14 md:pb-32 md:justify-between">
       <div>

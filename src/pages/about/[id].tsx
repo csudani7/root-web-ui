@@ -21,10 +21,10 @@ export default function AboutPage() {
     <>
       <WebHeader />
       <PageLayout>
-        <AboutLandingSlice currentUser={id} isSecondVariant={isSecondVariant} />
+        <AboutLandingSlice currentUser={id} />
         <FeedbackSlice isTitleShow={false} isShadowShow={false} isSecondVariant={isSecondVariant} />
         <TutorPlaceSlice isSecondVariant={isSecondVariant} />
-        <StatsCounterSlice isSecondVariant={isSecondVariant} />
+        <StatsCounterSlice />
         <PromotionSlice isSecondVariant={isSecondVariant} />
         <FeedbackSlice isTitleShow={false} isShadowShow={false} isSecondVariant={isSecondVariant} />
         <PromotionFooterSlice isSecondVariant={isSecondVariant} />

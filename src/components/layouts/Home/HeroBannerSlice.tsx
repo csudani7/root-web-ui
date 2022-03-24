@@ -92,7 +92,7 @@ export default function HeroBannerSlice({ isSecondVariant }: VariantProps): JSX.
       </div>
       {isSecondVariant ? (
         <div className="relative flex flex-col flex-1 md:justify-center md:items-center px-8">
-          <HeroBannerImagesSection isSecondVariant={isSecondVariant} />
+          <HeroBannerImagesSection />
         </div>
       ) : (
         <div className="relative flex flex-col flex-1 md:justify-center md:items-center">

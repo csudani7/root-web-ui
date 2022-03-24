@@ -1,5 +1,4 @@
 import React from 'react';
-import { VariantProps } from '../../../../types/common';
 import { Slider } from '../../../ui/Slider';
 
 const settings = {
@@ -41,7 +40,7 @@ const settings = {
   ],
 };
 
-export default function MeetOtherSlice({ isSecondVariant }: VariantProps) {
+export default function MeetOtherSliceV2() {
   function UserSlider({ profileImage }: { profileImage: string }) {
     return (
       <>

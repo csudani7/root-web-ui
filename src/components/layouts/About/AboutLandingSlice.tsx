@@ -3,11 +3,10 @@ import ImageComponent from '../../ui/Image';
 import LandingBanner from '../../ui/LandingBanner';
 
 export interface Props {
-  isSecondVariant: boolean;
   currentUser: string;
 }
 
-export default function AboutLandingSlice({ currentUser, isSecondVariant }: Props): JSX.Element {
+export default function AboutLandingSlice({ currentUser }: Props): JSX.Element {
   return (
     <div className="relative px-6 md:px-10 lg:px-10 py-24 md:py-40">
       <div className="hidden md:block md:absolute md:left-0">

@@ -29,10 +29,10 @@ function HomeVariant() {
         <HeroBannerSlice isSecondVariant={isSecondVariant} />
         <TutorPlaceSlice isSecondVariant={isSecondVariant} />
         <CoursesCardSlice isSecondVariant={isSecondVariant} />
-        <PromotionSectionSlice isSecondVariant={isSecondVariant} />
+        <PromotionSectionSlice />
         <LiveCohortsSlice isSecondVariant={isSecondVariant} />
         <MeetTheTeamSlice isSecondVariant={isSecondVariant} />
-        <MeetOtherSliceV2 isSecondVariant={isSecondVariant} />
+        <MeetOtherSliceV2 />
         <PromotionSlice isSecondVariant={isSecondVariant} />
         <FeedbackSlice isSecondVariant={isSecondVariant} isReadMore={true} />
         <PromotionFooterSlice isSecondVariant={isSecondVariant} />
